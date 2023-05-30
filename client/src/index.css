@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fauna+One&display=swap');
+* {
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x:hidden;
+}
+#root {
+  overflow-x:hidden;
+}
+:root {
+  --black-darkest: #000000;
+  --black-darker: #0A0A0A;
+  --black-lightest: #333333;
+  --white-lightest: #FFFFFF;
+  --cyan: #49B9B5;
+  --red: #FF3F44;
+
+  --skill-tease: #F8F8F8;
+  --about-tease: #E8E8E8;
+  --about-card: #F8F8F8;
+  --light-blue: #16D9E3;
+  --blue: #46AEF7;
+  --black: #333333;
+  --skill-tease-dark: #777777;
+  --about-tease-dark: #555555;
+  --about-card-dark: #999999;
+}
