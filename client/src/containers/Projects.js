@@ -87,9 +87,11 @@ const Projects = () => {
   }
 
   const { ref: myRef1, inView: myElementIsVisible1 } = useInView({
+    triggerOnce: true
   
   });
   const { ref: myRef2, inView: myElementIsVisible2 } = useInView({
+    triggerOnce: true
     
   });
   const { ref: myRef3, inView: myElementIsVisible3 } = useInView({
@@ -149,9 +151,9 @@ const Projects = () => {
       </div>
     }
     <div className={theme==="light"?"bg-white border-t-4 border-black/20":"bg-[color:var(--black)]  border-t-4 border-black/20"} id="projects">
-        <h1 className={theme==="light"? "mx-auto w-max pt-16 font-heading text-big leading-snug px-4 text-black " : "mx-auto w-max pt-16 font-heading text-big leading-snug px-4 text-white"}>Projects <br/><i className="text-[color:var(--light-blue)] text-med relative -top-12">that have cemented expertise and skills</i><section className="inline-block relative -top-7 left-2">.</section></h1>
-        <div className="flex flex-col gap-x-6 gap-y-4 w-[70%] mx-auto pt-32">
-            <div ref={myRef1} className={`${theme==="light"?"flex gap-x-6 ":"flex gap-x-6 text-white"}`}>
+        <h1 className={theme==="light"? "mx-auto w-max pt-16 font-heading text-med leading-snug px-4 text-black " : "mx-auto w-max pt-16 font-heading text-sm title:text-big leading-snug px-4 text-white"}>Projects <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-2 title:-top-12">that have cemented expertise and skills</i><section className="inline-block relative left-1 -top-[0.5] top:-top-7 top:left-2">.</section></h1>
+        <div className="flex flex-col gap-x-6 gap-y-4 w-full homepage-header:w-[70%] px-8 homepage-header:px-0 mx-auto pt-32">
+            <div ref={myRef1} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 ":"flex gap-x-6 text-white"}`}>
                 <div className="flex-[0.50] flex items-center justify-center overflow-visible relative">
                     <div className={`${"relative py-16  px-8 rounded-2xl opacity-0"} ${myElementIsVisible1 ? 'animate-slideleft' : ''}`}>
                         <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={CentralTech} alt="Central Tech Project View" onClick={()=>setCt(!ct)}/>
@@ -170,9 +172,9 @@ const Projects = () => {
                 </div>
                 <div className={`${"flex-[0.5] overflow-hidden opacity-0"} ${myElementIsVisible1 ? 'animate-slideright' : ''}`}>
                     <h1 className="text-center font-heading text-med">Central Tech</h1>
-                    <div className="flex justify-center items-center gap-6 pt-4 pb-2">
-                        <a className="w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/centraltech-react" target="_blank" rel="noreferrer"><RxCode size={30} />View Code</a>
-                        <a className="bg-test w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="https://effortless-froyo-17f9a2.netlify.app/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
+                    <div className="flex flex-col project-button:flex-row justify-center items-center gap-6 pt-4 pb-2">
+                        <a className="w-full project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/centraltech-react" target="_blank" rel="noreferrer"><RxCode size={30} />View Code</a>
+                        <a className="bg-test w-full project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="https://effortless-froyo-17f9a2.netlify.app/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
                     </div>
                     <p className="font-paragraph leading-loose text-center pt-8">Immerse yourself in a seamless online shopping journey with my self-developed full stack e-commerce web application. It provides a comprehensive array of functionalities, allowing you to effortlessly browse, search, save, purchase, and filter products. I have meticulously implemented all the necessary pages to provide a complete and satisfying e-commerce experience.</p>
                     <p className="italic font-paragraph text-xs text-center pt-4">Please allow website to load for 1-3 minutes. Server is hosted on <i className="text-[color:var(--light-blue)]">Render</i> so data takes time to load. Once loaded the experience will be seamless.</p>
@@ -212,12 +214,13 @@ const Projects = () => {
                   <p className="text-sm">Git</p>
                 </div>
             </div>
-            <div ref={myRef2} className={`${theme==="light"?"flex gap-x-6 mt-64 ":"flex gap-x-6 text-white mt-64"}`}>
+            <div ref={myRef2} className={`${theme==="light"?"flex flex-col-reverse large:flex-row  gap-x-6 mt-64 ":"flex gap-x-6 text-white mt-64"}`}>
               <div className={`${"flex-[0.5] overflow-hidden"} ${myElementIsVisible2 ? 'animate-slideright' : ''}`}>
                 <h1 className="text-center font-heading text-med">Film Review</h1>
-                <div className="flex justify-center items-center gap-6 pt-4 pb-2">
-                    <a className="bg-test w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="http://www.nerd4u.online/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
-                    <a className="w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/Nerd4U-Ecommerce" target="_blank" rel="noreferrer"><RxCode size={30}/>View Code</a>
+                <div className="flex flex-col project-button:flex-row justify-center items-center gap-6 pt-4 pb-2">
+
+                    <a className="bg-test w-full project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="http://www.nerd4u.online/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
+                    <a className="w-full project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/Nerd4U-Ecommerce" target="_blank" rel="noreferrer"><RxCode size={30}/>View Code</a>
                 </div>
                 <p className="font-paragraph leading-loose text-center pt-8">Film Review is an innovative web application that empowers users to effortlessly explore a vast array of captivating movies using intuitive filters or a comprehensive search functionality. Additionally, users can stay updated on the latest trends in the film industry by discovering acclaimed actors and directors and exploring their notable works. The inclusion of an embedded YouTube Media Player ensures a seamless experience, exclusively playing official trailers whenever they are available.</p>
               </div>
@@ -238,33 +241,33 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-center gap-2 gap-y-2 text-white flex-wrap">
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible1 ? 'animate-grow' : ''}`}>
+            <div className="flex justify-center  gap-2 gap-y-2 text-white flex-wrap">
+                <div className={`${theme==="light"? "flex flex-col large:flex-row  gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2 ? 'animate-grow' : ''}`}>
                   <SiReact className="text-[color:var(--cyan)]" size={30}/>
                   <p className="text-sm">React</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible1 ? 'animate-grow' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2 ? 'animate-grow' : ''}`}>
                   <SiRedux className="text-[color:#7347B8]" size={30}/>
                   <p className="text-sm">Redux</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible1 ? 'animate-grow animation-delay-100' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2 ? 'animate-grow animation-delay-100' : ''}`}>
                   <SiHtml5 className="text-[color:#FF5733]" size={30}/>
                   <p className="text-sm">HTML5</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible1 ? 'animate-grow animation-delay-200' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2 ? 'animate-grow animation-delay-200' : ''}`}>
                   <SiTailwindcss className="text-[color:#36B4EF]" size={30}/>
                   <p className="text-sm">Tailwindcss</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible1 ? 'animate-grow animation-delay-700' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2 ? 'animate-grow animation-delay-700' : ''}`}>
                   <SiGithub className={theme==="light"?"text-white" : "text-black"} size={40}/>
                   <p className="text-sm">Pages</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible1 ? 'animate-grow animation-delay-700' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2 ? 'animate-grow animation-delay-700' : ''}`}>
                   <SiGit className="text-[color:#EA4E31]" size={30}/>
                   <p className="text-sm">Git</p>
                 </div>
             </div>
-            <div ref={myRef3} className={`${theme==="light"?"flex gap-x-6 mt-64 ":"flex gap-x-6 text-white mt-64"}`}>
+            <div ref={myRef3} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 mt-64 ":"flex gap-x-6 text-white mt-64"}`}>
               <div className="flex-[0.50] flex items-center justify-center overflow-visible relative">
                     <div className={`${"relative py-16  px-8 rounded-2xl"} ${myElementIsVisible3 ? 'animate-slideleft' : ''}`}>
                         <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={Nerd4u} alt="Nerd4u View" onClick={()=>setNu(!nu)}/>
@@ -283,43 +286,43 @@ const Projects = () => {
                 </div>
                 <div className={`${"flex-[0.5] overflow-hidden"} ${myElementIsVisible3 ? 'animate-slideright' : ''}`}>
                     <h1 className="text-center font-heading text-med">Nerd4U</h1>
-                    <div className="flex justify-center items-center gap-6 pt-4 pb-2">
-                        <a className="w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/Nerd4U-Ecommerce" target="_blank" rel="noreferrer"><RxCode size={30}/>View Code</a>
-                        <a className="bg-test w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="http://www.nerd4u.online/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
+                    <div className="flex flex-col project-button:flex-row justify-center items-center gap-6 pt-4 pb-2">
+                        <a className="w-full project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/Nerd4U-Ecommerce" target="_blank" rel="noreferrer"><RxCode size={30}/>View Code</a>
+                        <a className="bg-test w-full project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="http://www.nerd4u.online/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
                     </div>
                     <p className="font-paragraph leading-loose text-center pt-8">E-commerce web application designed for the purchase of comics and other related items. It features a searching system with appropriate filteration, secure user authentication, admin panel for control of SQL database, and checkout.</p>
                 </div>
             </div>
             <div className="flex justify-center gap-2 gap-y-2 text-white flex-wrap mb-32">
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2? 'animate-grow' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible3 ? 'animate-grow' : ''}`}>
                   <SiFlask className="text-white" size={30}/>
                   <p className="text-sm">Flask</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2? 'animate-grow' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible3 ? 'animate-grow' : ''}`}>
                   <SiPython className="text-[color:#F6C73A]" size={30}/>
                   <p className="text-sm">Python</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2? 'animate-grow animation-delay-100' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible3 ? 'animate-grow animation-delay-100' : ''}`}>
                   <SiHtml5 className="text-[color:#FF5733]" size={30}/>
                   <p className="text-sm">HTML5</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2? 'animate-grow animation-delay-100' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible3 ? 'animate-grow animation-delay-100' : ''}`}>
                   <SiCss3 className="text-[color:#2760E6]" size={30}/>
                   <p className="text-sm">CSS3</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2? 'animate-grow animation-delay-100' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible3 ? 'animate-grow animation-delay-100' : ''}`}>
                   <SiBootstrap className="text-[color:#7210F6]" size={30}/>
                   <p className="text-sm">Bootstrap</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2? 'animate-grow animation-delay-100' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible3 ? 'animate-grow animation-delay-100' : ''}`}>
                   <SiAmazonaws className="text-[color:#FF9900]" size={30}/>
                   <p className="text-sm">EC2</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2? 'animate-grow animation-delay-100' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible3 ? 'animate-grow animation-delay-100' : ''}`}>
                   <SiAmazonaws className="text-[color:#FF9900]" size={30}/>
                   <p className="text-sm">RDS</p>
                 </div>
-                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2? 'animate-grow animation-delay-700' : ''}`}>
+                <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible3 ? 'animate-grow animation-delay-700' : ''}`}>
                   <SiGit className="text-[color:#EA4E31]" size={30}/>
                   <p className="text-sm">Git</p>
                 </div>

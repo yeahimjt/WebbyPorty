@@ -15,16 +15,20 @@ import { SiAmazonaws, SiBootstrap, SiCss3, SiExpress, SiFigma, SiFlask, SiGit, S
 import { DiJava } from 'react-icons/di';
 
 import { Tooltip } from 'react-tooltip'
+import { useInView } from 'react-intersection-observer';
 
 
 const Profile = () => {
   const {theme, setTheme} = useContext(ThemeContext)
+  const { ref: myRef4, inView: myElementIsVisible4 } = useInView({
+    triggerOnce: true
+  });
   return (
     <>
-    <div className={theme==="light"?"bg-white h-screen" : "bg-[color:var(--black)] h-screen"} id="profile">
-      <h1 className={theme==="light"? "mx-auto w-max pt-16 font-heading text-big leading-snug px-4 text-black " : "mx-auto w-max pt-16 font-heading text-big leading-snug px-4 text-white"}>Profile <br/><i className="text-[color:var(--light-blue)] text-med relative -top-12">a little more about me</i><section className="inline-block relative -top-7 left-2">.</section></h1>
-      <div className={theme==="light"?"max-w-[1200px] flex flex-col gap-4 p-4 bg-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px]":"max-w-[1200px] flex flex-col gap-4 p-4 bg-[color:var(--about-tease-dark)] text-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px]"}>
-        <div className="flex gap-4">
+    <div  ref={myRef4} className={theme==="light"?"bg-white p-8 tablet:m-0" : "bg-[color:var(--black)] p-8 tablet:m-0"} id="profile">
+      <h1   className={theme==="light"? "mx-auto w-max pt-16 font-heading text-med homepage-header:text-big leading-snug px-4 text-black " : "mx-auto w-max pt-16 font-heading text-med leading-snug px-4 text-white"}>Profile <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-4 homepage-header:-top-12">a little more about me</i><section className="inline-block relative -top-2 title:-top-1 homepage-header:-top-7 left-2">.</section></h1>
+      <div  className={`${theme==="light"?"max-w-[1200px]  flex flex-col gap-4 p-4 bg-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px]":" max-w-[1200px]  flex flex-col gap-4 p-4 bg-[color:var(--about-tease-dark)] text-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px] "} ${myElementIsVisible4 ? 'animate-flip-up animate-once animate-duration-1000 animate-ease-in-out animate-normal' : ''}`}>
+        <div className="flex gap-4 h-full flex-col profile-icon:flex-row">
           <div className="flex justify-center items-center">
             <img className="w-[120px] h-[120px] relative  object-cover rounded-full" src={Gif} alt="memoji"/>
           </div>
@@ -145,7 +149,7 @@ const Profile = () => {
         <p>Having an extensive background in computer science, I possess a broad understanding of various programming languages, enabling me to rapidly adapt to new technologies by leveraging my grasp of fundamental programming principles. Love to take my knowledge a step further and not simply get something to work, but to understand why it works. I take great pride in the work I do.</p>
         <p className="font-heading text-sm mt-12">Experience</p>
         <div className="flex flex-col gap-4 justify-center" >
-          <div className={theme==="light"?"flex justify-center gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease)] rounded-full select-none my-tool":"flex justify-center gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease-dark)] rounded-full select-none my-tool"} data-tooltip-id='my-tool' data-tooltip-place='bottom' data-data-tooltip-offset={10} data-tooltip-content="Designed & Developed a realtor web application end-to-end for Glass Realty, aimed at fostering mutual benefits between consumers and realtors through the utilization of shared data. This platform enables them to generate keys from the data they post, offering opportunities for financial gains and self-promotion on the website. The application was developed using React, HTML, Tailwind, and SQL as key technologies.">
+          <div className={theme==="light"?"flex justify-center gap-6 mobile:gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease)] rounded-full select-none my-tool":"flex justify-center gap-6 mobile:gap-32  items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease-dark)] rounded-full select-none my-tool"} data-tooltip-id='my-tool' data-tooltip-place='bottom' data-data-tooltip-offset={10} data-tooltip-content="Designed & Developed a realtor web application end-to-end for Glass Realty, aimed at fostering mutual benefits between consumers and realtors through the utilization of shared data. This platform enables them to generate keys from the data they post, offering opportunities for financial gains and self-promotion on the website. The application was developed using React, HTML, Tailwind, and SQL as key technologies.">
             <p className="text-sm text-center w-[100px]">2023</p>
             <div className="w-[287px]">
               <p className="text-sm text-[color:var(--light-blue)]">Full Stack Developer</p>
@@ -153,7 +157,7 @@ const Profile = () => {
             </div>
           </div>
           <hr/>
-          <div className={theme==="light"?"flex justify-center gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease)] rounded-full select-none my-tool":"flex justify-center gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease-dark)] rounded-full select-none my-tool"} data-tooltip-id='my-tool' data-tooltip-place='bottom' data-data-tooltip-offset={10} data-tooltip-content="Through this comprehensive course, I have acquired the necessary skills and knowledge to thrive in the dynamic field of front-end web development. The program provided me with hands-on experience and a deep understanding of essential concepts such as HTML, CSS, JavaScript, responsive design, user interface (UI) development, and web accessibility. The curriculum was thoughtfully designed to offer a well-rounded education that combines theoretical foundations with practical application. Led by industry experts, the certificate program ensured that I stayed up-to-date with the latest industry standards and best practices in web development">
+          <div className={theme==="light"?"flex justify-center gap-6 mobile:gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease)] rounded-full select-none my-tool":"flex justify-center gap-6 mobile:gap-32  items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease-dark)] rounded-full select-none my-tool"} data-tooltip-id='my-tool' data-tooltip-place='bottom' data-data-tooltip-offset={10} data-tooltip-content="Through this comprehensive course, I have acquired the necessary skills and knowledge to thrive in the dynamic field of front-end web development. The program provided me with hands-on experience and a deep understanding of essential concepts such as HTML, CSS, JavaScript, responsive design, user interface (UI) development, and web accessibility. The curriculum was thoughtfully designed to offer a well-rounded education that combines theoretical foundations with practical application. Led by industry experts, the certificate program ensured that I stayed up-to-date with the latest industry standards and best practices in web development">
             <p className="text-sm text-center w-[100px]">2023</p>
             <div className="w-[287px]">
               <p className="text-sm text-[color:var(--light-blue)]">Full Stack Developer Certificate</p>
@@ -161,7 +165,7 @@ const Profile = () => {
             </div>
           </div>
           <hr/>
-          <div className={theme==="light"?"flex justify-center gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease)] rounded-full select-none my-tool":"flex justify-center gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease-dark)] rounded-full select-none my-tool"} data-tooltip-id='my-tool' data-tooltip-place='bottom' data-data-tooltip-offset={10} data-tooltip-content="Through collaborative projects and practical experiences with a wide range of programming languages, I honed my problem-solving and communication skills, preparing me for diverse roles in the technology industry and fostering continuous learning and growth.">
+          <div className={theme==="light"?"flex justify-center gap-6 mobile:gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease)] rounded-full select-none my-tool":"flex justify-center gap-6 mobile:gap-32  items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease-dark)] rounded-full select-none my-tool"} data-tooltip-id='my-tool' data-tooltip-place='bottom' data-data-tooltip-offset={10} data-tooltip-content="Through collaborative projects and practical experiences with a wide range of programming languages, I honed my problem-solving and communication skills, preparing me for diverse roles in the technology industry and fostering continuous learning and growth.">
             <p className="text-sm text-center w-[100px]">2019-2022</p>
             <div className="w-[287px]">
               <p className="text-sm text-[color:var(--light-blue)]">University of Texas at San Antonio</p>

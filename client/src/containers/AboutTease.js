@@ -12,7 +12,7 @@ const AboutTease = () => {
   return (
 
     <div  className={theme==="light"? "bg-[color:var(--about-tease)]" : "bg-[color:var(--about-tease-dark)]"}>
-        <h1 ref={myRef} className={theme==="light"? "text-med font-heading text-center w-[90%] mx-auto mt-48" : "text-med font-heading text-center w-[90%] mx-auto mt-48 text-white"}>I merge <i className="text-[color:var(--light-blue)]">exceptional design & engineering</i> to create <i className="text-[color:var(--light-blue)]">compelling digital experiences for business success</i>.</h1>
+        <h1 ref={myRef} className={theme==="light"? "text-sm title:text-med font-heading text-center w-[90%] mx-auto mt-48" : "text-sm title:text-med font-heading text-center w-[90%] mx-auto mt-48 text-white"}>I merge <i className="text-[color:var(--light-blue)]">exceptional design & engineering</i> to create <i className="text-[color:var(--light-blue)]">compelling digital experiences for business success</i>.</h1>
         <div className="flex gap-12 justify-center mx-16 flex-wrap py-16">
             <div className={`${theme==="light"? "flex flex-col max-w-[410px] leading-loose hover:shadow-2xl  transition-all relative hover:-top-2  bg-[color:var(--about-card)] py-6 px-4  text-black opacity-0" : "flex flex-col max-w-[410px] leading-loose bg-[color:var(--about-card-dark)] py-6 px-4 hover:shadow-2xl  transition-all relative hover:-top-2 text-white opacity-0 "} ${myElementIsVisible ? 'animate-grow' : ''}`}>
                 <img src="/freelance.svg" alt="freelance"/>

@@ -9,7 +9,13 @@ module.exports = {
         'homepage-hi2': '900px',
         'homepage-hi3': '725px',
         'homepage-hi4': '400px',
+        'homepage-header': '821px',
+        'profile-icon': '620px',
         'mobile': '620px',
+        'tablet': '1200px',
+        'large': '1500px',
+        'project-button':'580px',
+        'title': '800px'
       },
       transitionDelay: {
         '0': '0ms',
@@ -46,7 +52,8 @@ module.exports = {
         clickhere: 'clickhere 2s ease-in-out infinite',
         jello: 'jello 2s ease-in-out',
         grow: 'grow 1s ease-in-out forwards',
-        swipeLeft: 'swipeLeft 0.3s ease-in-out'
+        swipeLeft: 'swipeLeft 0.3s ease-in-out',
+        rotateY: 'rotateY 0.5s ease-in-out forwards'
       },
       fontSize: {
         big: '52px',
@@ -136,12 +143,20 @@ module.exports = {
           }
           
         },
-
+        rotateY: {
+          '0%': {
+            opacity: 0, transform: 'rotateY(180deg)'
+          },
+          '100%': {
+            opacity: 0, transform: 'rotateY(0deg)'
+          }
+        }
       }
     },
   },
   plugins: [
     require("tailwindcss-animation-delay"),
+    require('tailwindcss-animated')
     // ...
   ],
 }
