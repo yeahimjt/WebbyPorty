@@ -15,7 +15,8 @@ module.exports = {
         'tablet': '1200px',
         'large': '1500px',
         'project-button':'580px',
-        'title': '800px'
+        'title': '800px',
+        'smallest':'520px',
       },
       transitionDelay: {
         '0': '0ms',

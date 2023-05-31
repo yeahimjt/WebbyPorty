@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ThemeContext } from '../App'
 import Gif from '../assets/ezgif.com-video-to-gif.gif'
 
+import Typewriter from 'typewriter-effect';
 
 import {
     Accordion,
@@ -27,14 +28,23 @@ const Profile = () => {
     <>
     <div  ref={myRef4} className={theme==="light"?"bg-white p-8 tablet:m-0" : "bg-[color:var(--black)] p-8 tablet:m-0"} id="profile">
       <h1   className={theme==="light"? "mx-auto w-max pt-16 font-heading text-med homepage-header:text-big leading-snug px-4 text-black " : "mx-auto w-max pt-16 font-heading text-med leading-snug px-4 text-white"}>Profile <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-4 homepage-header:-top-12">a little more about me</i><section className="inline-block relative -top-2 title:-top-1 homepage-header:-top-7 left-2">.</section></h1>
-      <div  className={`${theme==="light"?"max-w-[1200px]  flex flex-col gap-4 p-4 bg-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px]":" max-w-[1200px]  flex flex-col gap-4 p-4 bg-[color:var(--about-tease-dark)] text-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px] "} ${myElementIsVisible4 ? 'animate-flip-up animate-once animate-duration-1000 animate-ease-in-out animate-normal' : ''}`}>
+      <div  className={`${theme==="light"?"max-w-[1200px]  flex flex-col gap-4 p-4 bg-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px]":" max-w-[1200px]  flex flex-col gap-4 p-4 bg-[color:var(--about-tease-dark)] text-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px] "} ${myElementIsVisible4 ? 'animate-flip-up animate-once animate-duration-1000 animate-ease-in-out animate-normal animation-delay-300' : ''}`}>
         <div className="flex gap-4 h-full flex-col profile-icon:flex-row">
           <div className="flex justify-center items-center">
             <img className="w-[120px] h-[120px] relative  object-cover rounded-full" src={Gif} alt="memoji"/>
           </div>
           <div>
             <h1 className="text-med font-heading">Jonathan Andrew Trevino</h1>
-            <p className="text-sm font-paragraph">Full Stack Developer</p>
+            <Typewriter
+  options={{
+    strings: ['Full Stack Developer', 'Freelance Consultant', 'Full Stack Developer'],
+    autoStart: true,
+    loop: true,
+    pauseFor: 200,
+    deleteSpeed: 2,
+    changeDelay: 12
+  }}
+/>
           </div>
         </div>
         <p className="font-heading text-sm">Skills</p>

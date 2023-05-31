@@ -10,7 +10,11 @@ const AboutTease = () => {
     });
 
   return (
-
+    <>
+    <div className="tablet:flex tablet:justify-center mx-auto  ">
+          <SkillTease/>
+      </div>
+    
     <div  className={theme==="light"? "bg-[color:var(--about-tease)]" : "bg-[color:var(--about-tease-dark)]"}>
         <h1 ref={myRef} className={theme==="light"? "text-sm title:text-med font-heading text-center w-[90%] mx-auto mt-48" : "text-sm title:text-med font-heading text-center w-[90%] mx-auto mt-48 text-white"}>I merge <i className="text-[color:var(--light-blue)]">exceptional design & engineering</i> to create <i className="text-[color:var(--light-blue)]">compelling digital experiences for business success</i>.</h1>
         <div className="flex gap-12 justify-center mx-16 flex-wrap py-16">
@@ -31,6 +35,7 @@ const AboutTease = () => {
             </div>
         </div>
     </div>
+    </>
   )
 }
 
