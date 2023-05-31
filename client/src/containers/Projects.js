@@ -153,7 +153,7 @@ const Projects = () => {
     <div className={theme==="light"?"bg-white border-t-4 border-black/20":"bg-[color:var(--black)]  border-t-4 border-black/20"} id="projects">
         <h1 className={theme==="light"? "mx-auto  smallest:w-max pt-16 font-heading text-med leading-snug px-4 text-black " : "mx-auto  pt-16 font-heading text-sm title:text-big leading-snug px-4 text-white"}>Projects <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-2 title:-top-4">that have cemented expertise and skills</i><section className="inline-block relative left-2 -top-1 top:-top-7 top:left-2">.</section></h1>
         <div className="flex flex-col gap-x-6 gap-y-4 w-full homepage-header:w-[70%] px-8 homepage-header:px-0 mx-auto pt-32">
-            <div ref={myRef1} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 ":"flex gap-x-6 text-white"}`}>
+            <div ref={myRef1} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 ":"flex flex-col large:flex-row gap-x-6 text-white"}`}>
                 <div className="flex-[0.50] flex items-center justify-center overflow-visible relative">
                     <div className={`${"relative py-16  px-8 rounded-2xl opacity-0"} ${myElementIsVisible1 ? 'animate-slideleft' : ''}`}>
                         <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={CentralTech} alt="Central Tech Project View" onClick={()=>setCt(!ct)}/>
@@ -214,7 +214,7 @@ const Projects = () => {
                   <p className="text-sm">Git</p>
                 </div>
             </div>
-            <div ref={myRef2} className={`${theme==="light"?"flex flex-col-reverse large:flex-row  gap-x-6 mt-64 ":"flex gap-x-6 text-white mt-64"}`}>
+            <div ref={myRef2} className={`${theme==="light"?"flex flex-col-reverse large:flex-row  gap-x-6 mt-64 ":"flex flex-col-reverse large:flex-row  gap-x-6 text-white mt-64"}`}>
               <div className={`${"flex-[0.5] overflow-hidden"} ${myElementIsVisible2 ? 'animate-slideright' : ''}`}>
                 <h1 className="text-center font-heading text-med">Film Review</h1>
                 <div className="flex flex-col project-button:flex-row justify-center items-center gap-6 pt-4 pb-2">
@@ -242,7 +242,7 @@ const Projects = () => {
                 </div>
             </div>
             <div className="flex justify-center  gap-2 gap-y-2 text-white flex-wrap">
-                <div className={`${theme==="light"? "flex flex-col large:flex-row  gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2 ? 'animate-grow' : ''}`}>
+                <div className={`${theme==="light"? "flex  gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 opacity-0" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 opacity-0"} ${myElementIsVisible2 ? 'animate-grow' : ''}`}>
                   <SiReact className="text-[color:var(--cyan)]" size={30}/>
                   <p className="text-sm">React</p>
                 </div>
@@ -267,7 +267,7 @@ const Projects = () => {
                   <p className="text-sm">Git</p>
                 </div>
             </div>
-            <div ref={myRef3} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 mt-64 ":"flex gap-x-6 text-white mt-64"}`}>
+            <div ref={myRef3} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 mt-64 ":"flex flex-col large:flex-row gap-x-6 text-white mt-64"}`}>
               <div className="flex-[0.50] flex items-center justify-center overflow-visible relative">
                     <div className={`${"relative py-16  px-8 rounded-2xl"} ${myElementIsVisible3 ? 'animate-slideleft' : ''}`}>
                         <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={Nerd4u} alt="Nerd4u View" onClick={()=>setNu(!nu)}/>
