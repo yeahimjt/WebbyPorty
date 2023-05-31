@@ -50,7 +50,7 @@ const Homepage = () => {
                     </div>
                 </div>
             </div>
-            <p className=" text-xs smallest:text-sm text-center font-paragraph relative -top-10 smallest:-top-2 homepage-header:-top-6 animate-slideright animation-delay-1000 opacity-0 overflow-y-hidden">I turn your ideas into a reality by crafting captivating and seamless web applications.</p>
+            <p className=" text-xs smallest:text-sm text-center font-paragraph relative -top-10 smallest:-top-2 homepage-header:-top-6 animate-slideright animation-delay-1000 opacity-0 overflow-y-visible pb-4">I turn your ideas into a reality by crafting captivating and seamless web applications.</p>
         </div>
         <div className="flex gap-6 smallest:py-4 px-4 overflow-visible ">
             <a href="https://www.github.com" className={theme==="light" ? "bg-[color:var(--black-darkest)] p-2 rounded-full hover:cursor-pointer hover:scale-105 transition-all text-white hover:rounded-2xl animate-slideright animation-delay-2000 opacity-0" : "bg-[color:var(--white-lightest)] p-2 rounded-full hover:cursor-pointer hover:scale-105 transition-all text-[color:var(--black-darkest)] hover:rounded-2xl animate-slideright animation-delay-2000 opacity-0"}><AiFillGithub size={36}/></a>

@@ -13,7 +13,7 @@ const Contact = ({alert, setAlert}) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!name || !email || !body) {
-      setAlert([<BiMessageError size={60}/>, "Your email was not sent!", "You are missing a necessary field."])
+      setAlert([<BiMessageError  className="alert-icon text-4xl"  />, "Your email was not sent!", "You are missing a necessary field."])
       return
     }
     console.log(name, email,body)
@@ -34,10 +34,10 @@ const Contact = ({alert, setAlert}) => {
           console.log(resData);
           if (resData.status === "success") {
             console.log('here')
-            setAlert([<IoMdCheckmarkCircleOutline size={60}/>, "Your email was sent!", "A response is headed back your way!"])
+            setAlert([<IoMdCheckmarkCircleOutline  className="alert-icon text-4xl" />, "Your email was sent!", "A response is headed back your way!"])
           } else if (resData.status === "fail") {
             console.log('out')
-            setAlert([<BiMessageError size={60}/>, "Your email was not sent!", "There is an error with the mailing service. Sorry for the inconvinience."])
+            setAlert([<BiMessageError className="alert-icon text-4xl"  />, "Your email was not sent!", "There is an error with the mailing service. Sorry for the inconvinience."])
           }
         })
       .then(() => {

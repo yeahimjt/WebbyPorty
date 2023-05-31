@@ -11,7 +11,7 @@ const AboutTease = () => {
 
   return (
     <>
-    <div className="tablet:flex tablet:justify-center mx-auto  ">
+    <div className="tablet:flex tablet:justify-center mx-auto   ">
           <SkillTease/>
       </div>
     

@@ -40,4 +40,7 @@ body {
   .icon {
     font-size: 32px;
   }
+  .alert-icon {
+    font-size:24px;
+  }
 }
