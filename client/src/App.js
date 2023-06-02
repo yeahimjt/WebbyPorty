@@ -8,7 +8,7 @@ import Projects from './containers/Projects';
 import AboutTease from './containers/AboutTease';
 import Contact from './containers/Contact';
 import Alert from './components/Alert';
-
+import SkillTease from './containers/SkillTease';
 AOS.init();
 export const ThemeContext = createContext(null)
 
@@ -20,6 +20,7 @@ function App() {
   const [alert, setAlert] = useState(null)
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
+      
       <div className="w-screen overflow-x-hidden">
         {theme === "light" ?
           <svg className="absolute top-4 left-4" width="54" height="74" viewBox="0 0 54 74" fill="none" xmlns="http://www.w3.org/2000/svg">

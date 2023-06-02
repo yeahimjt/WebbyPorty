@@ -11,13 +11,13 @@ import {AiOutlineEye} from 'react-icons/ai'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import { SiAmazonaws, SiBootstrap, SiCss3, SiExpress, SiFlask, SiGit, SiGithub, SiGithubpages, SiHtml5, SiMongodb, SiNetlify, SiPython, SiReact, SiRedux, SiRender, SiTailwindcss } from 'react-icons/si'
+import { SiAmazonaws, SiBootstrap, SiCss3, SiExpress, SiFlask, SiGit, SiGithub , SiHtml5, SiMongodb, SiNetlify, SiPython, SiReact, SiRedux, SiRender, SiTailwindcss } from 'react-icons/si'
 import { useInView } from 'react-intersection-observer'
 // ..
 AOS.init();
 
 const Projects = () => {
-  const {theme, toggleTheme} = useContext(ThemeContext)
+  const {theme} = useContext(ThemeContext)
   const [ct, setCt] = useState(null)
   const [nu, setNu] = useState(null)
   const [fr, setFr] = useState(null)
@@ -151,7 +151,7 @@ const Projects = () => {
       </div>
     }
     <div className={theme==="light"?"bg-white border-t-4 border-black/20":"bg-[color:var(--black)]  border-t-4 border-black/20"} id="projects">
-        <h1 className={theme==="light"? "mx-auto  smallest:w-max pt-16 font-heading text-med smallest:text-big leading-snug px-4 text-black " : "mx-auto smallest:w-max pt-16 font-heading text-med leading-snug px-4 text-white"}>Projects <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-2 title:-top-4">that have cemented expertise and skills</i><section className="inline-block relative left-2 -top-1 top:-top-7 top:left-2">.</section></h1>
+        <h1 className={theme==="light"? "mx-auto  smallest:w-max pt-16 font-heading text-med smallest:text-big leading-snug px-4 text-black " : "mx-auto smallest:w-max pt-16 font-heading text-med smallest:text-big leading-snug px-4 text-white"}>Projects <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-2 title:-top-4">that have cemented expertise and skills</i><section className="inline-block relative left-2 -top-1 top:-top-7 top:left-2">.</section></h1>
         <div className="flex flex-col gap-x-6 gap-y-4 w-full homepage-header:w-[70%] px-8 homepage-header:px-0 mx-auto pt-32">
             <div ref={myRef1} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 ":"flex flex-col large:flex-row gap-x-6 text-white"}`}>
                 <div className="flex-[0.50] flex items-center justify-center overflow-visible relative">

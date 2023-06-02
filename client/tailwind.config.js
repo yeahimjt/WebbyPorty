@@ -60,6 +60,7 @@ module.exports = {
         big: '52px',
         med: '30px',
         sm: '19px',
+        mobile: '18px',
       },
       keyframes: {
         slowfade: {
