@@ -8,7 +8,6 @@ import Projects from './containers/Projects';
 import AboutTease from './containers/AboutTease';
 import Contact from './containers/Contact';
 import Alert from './components/Alert';
-import SkillTease from './containers/SkillTease';
 AOS.init();
 export const ThemeContext = createContext(null)
 

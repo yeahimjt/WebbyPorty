@@ -1,50 +1,16 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../App'
 import {AiFillGithub, AiFillLinkedin, AiFillFilePdf} from 'react-icons/ai'
-import CyanBlur from '../blurs/Cyanblur'
-import RedBlur from '../blurs/RedBlur'
-import MovingComponent from 'react-moving-text'
 import SkillTease from './SkillTease'
 import {FaUserGraduate} from 'react-icons/fa'
-import {GrCertificate, GrUserExpert} from 'react-icons/gr'
 import {TbFileCertificate} from 'react-icons/tb'
 import {AiOutlineCompass} from 'react-icons/ai'
-import Wave from 'react-wavify'
-import AnimatedWave from '../components/AnimatedWave.tsx'
 
 const Homepage = () => {
-  const style1= {stopColor:'#686de0', stopOpacity: '1'}
-  const style2= {stopColor:'#686de0', stopOpacity: '1'}
   const {theme} = useContext(ThemeContext)
-  const Letters = [
-    "J",
-    "o",
-    "n",
-    "a",
-    "t",
-    "h",
-    "a",
-    "n",
-  ]
-  const MidLetters = [
-    "A",
-    "n",
-    "d",
-    "r",
-    "e",
-    "w"
-  ]
-  const LastLetters = [
-    "T",
-    "r",
-    "e",
-    "v",
-    "i",
-    "n",
-    "o"
-  ]
-  return (
 
+  return (
+    
     <header className=" w-screen relative overflow-visible">
       {theme === "light" ? 
       <svg className="absolute h-[calc(50vh-0px)] bottom-1 " preserveAspectRatio='none' width="915" height="603" viewBox="0 0 915 603" fill="none" xmlns="http://www.w3.org/2000/svg">

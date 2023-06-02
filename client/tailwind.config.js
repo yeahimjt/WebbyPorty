@@ -54,7 +54,8 @@ module.exports = {
         jello: 'jello 2s ease-in-out',
         grow: 'grow 1s ease-in-out forwards',
         swipeLeft: 'swipeLeft 0.3s ease-in-out',
-        rotateY: 'rotateY 0.5s ease-in-out forwards'
+        rotateY: 'rotateY 0.5s ease-in-out forwards',
+        mobileOpen: 'mobileOpen 0.3s ease-in-out forwards'
       },
       fontSize: {
         big: '52px',
@@ -151,6 +152,14 @@ module.exports = {
           },
           '100%': {
             opacity: 0, transform: 'rotateY(0deg)'
+          }
+        },
+        mobileOpen: {
+          '0%': {
+            transform: 'translateY(-1200px)'
+          },
+          '100%': {
+            transform: 'translateY(0px)'
           }
         }
       }

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import SkillTease from './SkillTease'
 import { ThemeContext } from '../App'
 import { useInView } from 'react-intersection-observer';
 

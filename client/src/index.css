@@ -38,7 +38,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .icon {
-    font-size: 32px;
+    font-size: 20px;
   }
   .alert-icon {
     font-size:24px;

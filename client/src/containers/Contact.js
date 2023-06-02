@@ -6,7 +6,7 @@ import {BiMessageError} from 'react-icons/bi'
 import {IoMdCheckmarkCircleOutline} from 'react-icons/io'
 import { useInView } from 'react-intersection-observer'
 const Contact = ({alert, setAlert}) => {
-  const {theme, setTheme} = useContext(ThemeContext)
+  const {theme} = useContext(ThemeContext)
   const [name, setName] = useState(null)
   const [email, setEmail] = useState(null)
   const [body, setBody] = useState(null)
@@ -50,7 +50,7 @@ const Contact = ({alert, setAlert}) => {
     triggerOnce: true
   });
   return (
-    <div className={theme==="light"?"pb-32":"pb-32 bg-[color:var(--black)]"}>
+    <div className={theme==="light"?"pb-32":"pb-32 bg-[color:var(--black)]"} id="contact">
       <h1 className={theme==="light"? "mx-auto w-max pt-16 font-heading text-med title:text-big leading-snug px-4 text-black  max-w-[714px text-left]" : "mx-auto w-max pt-16 font-heading text-med title:text-big leading-snug px-4 text-white max-w-[714px]"}>Contact</h1>
       <p className={theme==="light"? " mx-auto pt-16 font-paragraph text-sm title:text-med leading-snug px-4 text-black  max-w-[714px] relative -top-12" : "mx-auto pt-16 font-paragraph text-sm title:text-med leading-snug px-4 text-white max-w-[714px] relative -top-12"}><i className="text-[color:var(--light-blue)] text-sm title:text-med">Lets Connect</i> - Reach out to discuss potential projects, collaborations, or simply to say hello.</p>
       <div ref={myRef4} className="flex gap-6 mobile:flex-row flex-col justify-center py-16 flex-wrap">

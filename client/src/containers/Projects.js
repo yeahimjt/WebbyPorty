@@ -105,7 +105,7 @@ const Projects = () => {
               <div className='absolute -top-4 -right-4 z-60 hover:scale-105 hover:cursor-pointer transition-all z-80 bg-[color:var(--red)] p-4 rounded-full' onClick={()=>{setCt(!ct); setCurrentIndexCt(0)}}>
                 <GrClose className="relative" size={22} />
               </div>
-              <img className="object-contain" src={`/${imgSlides[2][currentIndexCt]}`}>
+              <img className="object-contain" src={`/${imgSlides[2][currentIndexCt]}`} alt="project">
               </img>
               <div className=" absolute top-[50%] -translate-x-0 translate-y-[-50%] -left-5 text-5 text-2l rounded-full p-2 bg-[color:var(--cyan)] text-white cursor-pointer" onClick={()=>prevSlideCt()}>
                 <GoArrowSmallLeft size={32}/>
@@ -122,7 +122,7 @@ const Projects = () => {
               <div className='absolute -top-4 -right-4 z-60 hover:scale-105 hover:cursor-pointer transition-all z-80 bg-[color:var(--red)] p-4 rounded-full' onClick={()=>{setNu(!nu); setCurrentIndexNu(0)}}>
                 <GrClose className="relative" size={22} />
               </div>
-              <img className="object-contain" src={`/${imgSlides[0][currentIndexNu]}`}>
+              <img className="object-contain" src={`/${imgSlides[0][currentIndexNu]}`} alt="project">
               </img>
               <div className=" absolute top-[50%] -translate-x-0 translate-y-[-50%] -left-5 text-5 text-2l rounded-full p-2 bg-[color:var(--cyan)] text-white cursor-pointer" onClick={()=>prevSlideNu()}>
                 <GoArrowSmallLeft size={32}/>
@@ -139,7 +139,7 @@ const Projects = () => {
               <div className='absolute -top-4 -right-4 z-60 hover:scale-105 hover:cursor-pointer transition-all z-80 bg-[color:var(--red)] p-4 rounded-full' onClick={()=>{setFr(!fr); setCurrentIndexFr(0)}}>
                 <GrClose className="relative" size={22} />
               </div>
-              <img className="object-contain" src={`/${imgSlides[1][currentIndexFr]}`}>
+              <img className="object-contain" src={`/${imgSlides[1][currentIndexFr]}`} alt="project">
               </img>
               <div className=" absolute top-[50%] -translate-x-0 translate-y-[-50%] -left-5 text-5 text-2l rounded-full p-2 bg-[color:var(--cyan)] text-white cursor-pointer" onClick={()=>prevSlideFr()}>
                 <GoArrowSmallLeft size={32}/>
@@ -173,8 +173,8 @@ const Projects = () => {
                 <div className={`${"flex-[0.5] overflow-hidden opacity-0"} ${myElementIsVisible1 ? 'animate-slideright' : ''}`}>
                     <h1 className="text-center font-heading text-med">Central Tech</h1>
                     <div className="flex flex-col project-button:flex-row justify-center items-center gap-6 pt-4 pb-2">
-                        <a className="w-full project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/centraltech-react" target="_blank" rel="noreferrer"><RxCode size={30} />View Code</a>
-                        <a className="bg-test w-full project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="https://effortless-froyo-17f9a2.netlify.app/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
+                        <a className="w-[90%] project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/centraltech-react" target="_blank" rel="noreferrer"><RxCode size={30} />View Code</a>
+                        <a className="bg-test w-[90%] project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="https://effortless-froyo-17f9a2.netlify.app/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
                     </div>
                     <p className="font-paragraph leading-loose text-center pt-8">Immerse yourself in a seamless online shopping journey with my self-developed full stack e-commerce web application. It provides a comprehensive array of functionalities, allowing you to effortlessly browse, search, save, purchase, and filter products. I have meticulously implemented all the necessary pages to provide a complete and satisfying e-commerce experience.</p>
                     <p className="italic font-paragraph text-xs text-center pt-4">Please allow website to load for 1-3 minutes. Server is hosted on <i className="text-[color:var(--light-blue)]">Render</i> so data takes time to load. Once loaded the experience will be seamless.</p>
@@ -219,8 +219,8 @@ const Projects = () => {
                 <h1 className="text-center font-heading text-med">Film Review</h1>
                 <div className="flex flex-col project-button:flex-row justify-center items-center gap-6 pt-4 pb-2">
 
-                    <a className="bg-test w-full project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="http://www.nerd4u.online/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
-                    <a className="w-full project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/Nerd4U-Ecommerce" target="_blank" rel="noreferrer"><RxCode size={30}/>View Code</a>
+                    <a className="bg-test w-[90%] project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="http://www.nerd4u.online/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
+                    <a className="w-[90%] project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/Nerd4U-Ecommerce" target="_blank" rel="noreferrer"><RxCode size={30}/>View Code</a>
                 </div>
                 <p className="font-paragraph leading-loose text-center pt-8">Film Review is an innovative web application that empowers users to effortlessly explore a vast array of captivating movies using intuitive filters or a comprehensive search functionality. Additionally, users can stay updated on the latest trends in the film industry by discovering acclaimed actors and directors and exploring their notable works. The inclusion of an embedded YouTube Media Player ensures a seamless experience, exclusively playing official trailers whenever they are available.</p>
               </div>
@@ -287,8 +287,8 @@ const Projects = () => {
                 <div className={`${"flex-[0.5] overflow-hidden"} ${myElementIsVisible3 ? 'animate-slideright' : ''}`}>
                     <h1 className="text-center font-heading text-med">Nerd4U</h1>
                     <div className="flex flex-col project-button:flex-row justify-center items-center gap-6 pt-4 pb-2">
-                        <a className="w-full project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/Nerd4U-Ecommerce" target="_blank" rel="noreferrer"><RxCode size={30}/>View Code</a>
-                        <a className="bg-test w-full project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="http://www.nerd4u.online/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
+                        <a className="w-[90%] project-button:w-[25%] border-2 border-[color:var(--blue)] rounded-xl py-1 hover:cursor-pointer hover:scale-105 transition-all text-center flex justify-center gap-2 items-center" href="https://github.com/yeahimjt/Nerd4U-Ecommerce" target="_blank" rel="noreferrer"><RxCode size={30}/>View Code</a>
+                        <a className="bg-test w-[90%] project-button:w-[25%] py-1 rounded-xl hover:cursor-pointer hover:scale-105 transition-all text-white text-center flex justify-center gap-2 items-center" href="http://www.nerd4u.online/" target="_blank" rel="noreferrer"><AiOutlineEye size={30}/>View Live</a>
                     </div>
                     <p className="font-paragraph leading-loose text-center pt-8">E-commerce web application designed for the purchase of comics and other related items. It features a searching system with appropriate filteration, secure user authentication, admin panel for control of SQL database, and checkout.</p>
                 </div>

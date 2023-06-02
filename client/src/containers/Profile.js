@@ -20,7 +20,7 @@ import { useInView } from 'react-intersection-observer';
 
 
 const Profile = () => {
-  const {theme, setTheme} = useContext(ThemeContext)
+  const {theme} = useContext(ThemeContext)
   const { ref: myRef4, inView: myElementIsVisible4 } = useInView({
     triggerOnce: true
   });
@@ -33,8 +33,8 @@ const Profile = () => {
           <div className="flex justify-center items-center">
             <img className="w-[120px] h-[120px] relative  object-cover rounded-full" src={Gif} alt="memoji"/>
           </div>
-          <div className='my-tool select-none'  data-tooltip-id='my-tool' data-tooltip-place='bottom' data-data-tooltip-offset={10} data-tooltip-content="I go by JT too!">
-            <h1 className="text-med font-heading ">Jonathan Andrew Trevino</h1>
+          <div className='select-none'  >
+            <h1 className="text-med font-heading tool" data-tooltip-id='tool' data-tooltip-place='top' data-data-tooltip-offset={10} data-tooltip-content="I go by JT too!">Jonathan Andrew Trevino</h1>
             <Typewriter
   options={{
     strings: ['Full Stack Developer', 'Freelance Consultant', 'Front End Developer'],
@@ -156,7 +156,7 @@ const Profile = () => {
             </AccordionItem>
         </Accordion>
         <p className="font-heading text-sm mt-12">About Me</p>
-        <p>Having an extensive background in computer science, I possess a broad understanding of various programming languages, enabling me to rapidly adapt to new technologies by leveraging my grasp of fundamental programming principles. Love to take my knowledge a step further and not simply get something to work, but to understand why it works. I take great pride in the work I do.</p>
+        <p>Having an extensive background in computer science, I possess a broad foundation of various programming languages, enabling me to rapidly adapt to new technologies by leveraging my grasp of fundamental programming principles. Love to take my knowledge a step further and not simply get something to work, but to understand why it works. I take great pride in the work I do.</p>
         <p className="font-heading text-sm mt-12">Experience</p>
         <div className="flex flex-col gap-4 justify-center" >
           <div className={theme==="light"?"flex justify-center gap-6 mobile:gap-32 items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease)] rounded-full select-none my-tool":"flex justify-center gap-6 mobile:gap-32  items-center flex-[0.5] relative h-[300px] hover:bg-[color:var(--skill-tease-dark)] rounded-full select-none my-tool"} data-tooltip-id='my-tool' data-tooltip-place='bottom' data-data-tooltip-offset={10} data-tooltip-content="Designed & Developed a realtor web application end-to-end for Glass Realty, aimed at fostering mutual benefits between consumers and realtors through the utilization of shared data. This platform enables them to generate keys from the data they post, offering opportunities for financial gains and self-promotion on the website. The application was developed using React, HTML, Tailwind, and SQL as key technologies.">
@@ -186,6 +186,7 @@ const Profile = () => {
       </div>  
     </div>
     <Tooltip anchorSelect='.my-tool'  style={{width: '300px', backgroundColor: theme === 'light' ? 'black' : 'white', color: theme==='light' ? 'white' : 'black', overflow: 'visible'}}/>
+    <Tooltip anchorSelect='.tool'  style={{width: '200px', backgroundColor: theme === 'light' ? 'black' : 'white', color: theme==='light' ? 'white' : 'black', overflow: 'visible', textAlign: 'center'}}/>
     </>
   )
 }
