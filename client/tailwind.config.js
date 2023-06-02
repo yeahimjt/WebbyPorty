@@ -23,7 +23,7 @@ module.exports = {
         '2000': '2000ms',
        },
       borderRadius: {
-        'right':'10px 0px 0px 10px',
+      'right':'10px 0px 0px 10px',
         'left':'0px 10px 10px 0px',
       },
       backgroundImage: {
@@ -55,7 +55,10 @@ module.exports = {
         grow: 'grow 1s ease-in-out forwards',
         swipeLeft: 'swipeLeft 0.3s ease-in-out',
         rotateY: 'rotateY 0.5s ease-in-out forwards',
-        mobileOpen: 'mobileOpen 0.3s ease-in-out forwards'
+        mobileOpen: 'mobileOpen 0.3s ease-in-out forwards',
+        move: 'move 15s ease-in-out infinite',
+        cloudMove: 'cloudMove 20s ease-in-out infinite',
+        cloudMove2: 'cloudMove2 22s ease-in-out infinite',
       },
       fontSize: {
         big: '52px',
@@ -160,6 +163,48 @@ module.exports = {
           },
           '100%': {
             transform: 'translateY(0px)'
+          }
+        },
+        move: {
+          '0%': {
+            transform: 'translateX(0px) translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateX(-20px) translateY(-10px) rotate(45deg)'
+          },
+          '75%': {
+            transform: 'translateX(-40px) translateY(-40px)'
+          },
+          '100%': {
+            transform: 'translateX(0px) translateY(0px)'
+          }
+        },
+        cloudMove: {
+          '0%': {
+            transform: 'translateX(0px) translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateX(-10px) translateY(-30px) rotate(2deg)'
+          },
+          '75%': {
+            transform: 'translateX(10px) translateY(-10px)'
+          },
+          '100%': {
+            transform: 'translateX(0px) translateY(0px)'
+          }
+        },
+        cloudMove2: {
+          '0%': {
+            transform: 'translateX(0px) translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateX(-10px) translateY(-5px) rotate(-4deg)'
+          },
+          '75%': {
+            transform: 'translateX(5px) translateY(-20px)'
+          },
+          '100%': {
+            transform: 'translateX(0px) translateY(0px)'
           }
         }
       }
