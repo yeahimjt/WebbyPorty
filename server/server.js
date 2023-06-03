@@ -9,16 +9,16 @@ const dotenv = require('dotenv')
 
 
 
-// app.use(cors({
-//     origin: ['https://myllave.com'],
-//     methods: ['GET', 'POST'],
-//     credentials: true,
-//     exposedHeaders: ["Set-Cookie"],
-// }));
 app.use(cors({
-    origin: ['http://localhost:3000'],
+    origin: ['https://yeahimjt.me'],
     methods: ['GET', 'POST'],
+    credentials: true,
+    exposedHeaders: ["Set-Cookie"],
 }));
+// app.use(cors({
+//     origin: ['http://localhost:3000'],
+//     methods: ['GET', 'POST'],
+// }));
 
 app.use(express.json());
 
