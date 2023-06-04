@@ -17,7 +17,7 @@ const Contact = ({alert, setAlert}) => {
       return
     }
     console.log(name, email,body)
-    const response = await fetch("https://web-portfolio-l9jd.onrender.com/send", {
+     await fetch("https://web-portfolio-l9jd.onrender.com/send", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
