@@ -156,7 +156,7 @@ const Projects = () => {
             <div ref={myRef1} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 ":"flex flex-col large:flex-row gap-x-6 text-white"}`}>
                 <div className="flex-[0.50] flex items-center justify-center overflow-visible relative">
                     <div className={`${"relative py-16  px-8 rounded-2xl opacity-0"} ${myElementIsVisible1 ? 'animate-slideleft' : ''}`}>
-                        <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={CentralTech} alt="Central Tech Project View" onClick={()=>setCt(!ct)}/>
+                        <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={CentralTech} alt="Central Tech Project View" onClick={()=>setCt(!ct)} title="Central Tech Project"/>
                         <div className="absolute flex -left-12 -top-8 -rotate-[45deg] transition-all animate-clickhere" onClick={()=>setCt(!ct)}>
                             <svg className="animate-clickhere" width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M108 31.6117L125.15 84.3948H180.65L135.75 117.017L152.9 169.8L108 137.178L63.1 169.8L80.2502 117.017L35.3502 84.3948H90.8497L108 31.6117Z" fill="#FF3F44"/>
@@ -226,7 +226,7 @@ const Projects = () => {
               </div>
               <div className="flex-[0.50] flex items-center justify-center overflow-visible relative">
                     <div className={`${"relative py-16  px-8 rounded-2xl"} ${myElementIsVisible2 ? 'animate-slideleft' : ''}`}>
-                        <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={FilmReview} alt="Film Review View" onClick={()=>setFr(!fr)}/>
+                        <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={FilmReview} alt="Film Review View" onClick={()=>setFr(!fr)} title="Film Review Project"/>
                         <div className="absolute flex -left-12 -top-8 -rotate-[45deg] transition-all animate-clickhere" onClick={()=>setFr(!fr)}>
                             <svg className="animate-clickhere" width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M108 31.6117L125.15 84.3948H180.65L135.75 117.017L152.9 169.8L108 137.178L63.1 169.8L80.2502 117.017L35.3502 84.3948H90.8497L108 31.6117Z" fill="#FF3F44"/>
@@ -270,7 +270,7 @@ const Projects = () => {
             <div ref={myRef3} className={`${theme==="light"?"flex flex-col large:flex-row gap-x-6 mt-64 ":"flex flex-col large:flex-row gap-x-6 text-white mt-64"}`}>
               <div className="flex-[0.50] flex items-center justify-center overflow-visible relative">
                     <div className={`${"relative py-16  px-8 rounded-2xl"} ${myElementIsVisible3 ? 'animate-slideleft' : ''}`}>
-                        <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={Nerd4u} alt="Nerd4u View" onClick={()=>setNu(!nu)}/>
+                        <img className="hover:scale-105 hover:cursor-pointer transition-all relative" src={Nerd4u} alt="Nerd4u View" onClick={()=>setNu(!nu)} title="Nerd4U Project"/>
                         <div className="absolute flex -left-12 -top-8 -rotate-[45deg] transition-all animate-clickhere" onClick={()=>setNu(!nu)}>
                             <svg className="animate-clickhere" width="216" height="216" viewBox="0 0 216 216" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M108 31.6117L125.15 84.3948H180.65L135.75 117.017L152.9 169.8L108 137.178L63.1 169.8L80.2502 117.017L35.3502 84.3948H90.8497L108 31.6117Z" fill="#FF3F44"/>
