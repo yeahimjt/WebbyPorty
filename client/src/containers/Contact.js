@@ -4,6 +4,7 @@ import { SiLinkedin } from 'react-icons/si'
 import { BsMailbox2 } from 'react-icons/bs'
 import {BiMessageError} from 'react-icons/bi'
 import {IoMdCheckmarkCircleOutline} from 'react-icons/io'
+import {TbMailFast} from 'react-icons/tb'
 import { useInView } from 'react-intersection-observer'
 const Contact = ({alert, setAlert}) => {
   const {theme} = useContext(ThemeContext)
@@ -16,7 +17,11 @@ const Contact = ({alert, setAlert}) => {
       setAlert([<BiMessageError  className="alert-icon text-4xl"  />, "Your email was not sent!", "You are missing a necessary field."])
       return
     }
-    console.log(name, email,body)
+    setAlert([
+      <TbMailFast className="alert-icon text-4xl"/>,
+      "Your email is sending!",
+      "Update Pending..."
+      ])
      await fetch("https://web-portfolio-l9jd.onrender.com/send", {
       method: "POST",
       headers: {
