@@ -60,7 +60,7 @@ const Nav = () => {
           }
           <button className=" hover:cursor-pointer hover:scale-105" onClick={()=>handleMenu()}><CgMenuRight size={30}/></button>
       </nav>
-      <NavMenu state={state} setState={setState} disabled={disabled} />
+      <NavMenu state={state} setState={setState} disabled={disabled} disableMenu={disableMenu} />
         
       
     </>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import {AiFillHtml5} from 'react-icons/ai'
 import {FaNodeJs} from 'react-icons/fa'
-import {SiTailwindcss} from 'react-icons/si'
+import {SiGreensock, SiTailwindcss} from 'react-icons/si'
 import {DiMysql, DiReact} from 'react-icons/di'
 import { ThemeContext } from '../App'
 const SkillTease = () => {
@@ -13,6 +13,7 @@ const SkillTease = () => {
         <DiMysql className="text-[color:var(--light-blue)] icon text-big" />
         <AiFillHtml5 className="text-[color:var(--light-blue)] icon text-big" />
         <FaNodeJs className="text-[color:var(--light-blue)] icon text-big" />
+        <SiGreensock className="text-[color:var(--light-blue)] icon text-big" />
     </div>
   )
 }

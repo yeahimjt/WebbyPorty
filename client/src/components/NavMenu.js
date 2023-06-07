@@ -3,8 +3,8 @@ import gsap from 'gsap'
 import { ThemeContext } from '../App'
 import { AiOutlineClose } from 'react-icons/ai'
 
-const NavMenu = ({state,setState,disabled}) => {
-    console.log(disabled)
+const NavMenu = ({state,setState,disabled, disableMenu}) => {
+
     const {theme} = useContext(ThemeContext)
     let mainMenu = useRef(null)
     let revealMenu = useRef(null)
@@ -15,6 +15,7 @@ const NavMenu = ({state,setState,disabled}) => {
     useEffect(()=> {
         if (state.clicked === false) {
             // close menu
+            disableMenu()
             gsap.to([revealMenu, revealMenuBackground], {
                 duration: 0.6,
                 height:0,
@@ -93,9 +94,9 @@ const NavMenu = ({state,setState,disabled}) => {
         <div className={theme==="light"?"overflow-hidden bg-white block  relative opacity-0 z-50 text-[color:var(--black)]":"overflow-hidden bg-[color:var(--about-tease-dark)] block relative opacity-0 z-50"} ref={el => (revealMenu = el)}>
             <button disabled={disabled} onClick={()=> setState({clicked: false, menuName: "Menu"})}><AiOutlineClose  className={theme==="light"?"absolute right-14 top-8 animate-wiggle animate-infinite text-yellow hover:text-[color:var(--main-blue)] hover:cursor-pointer": "absolute right-14 top-8 animate-wiggle animate-infinite text-white hover:text-white hover:cursor-pointer"} size={30} /></button>
             <ul className="text-big mt-32">
-                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line1 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="#projects" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Projects</a></li>
-                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line2 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="#profile" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Profile</a></li>
-                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line3 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="#contact" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Contact</a></li>
+                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line1 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="/#projects" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Projects</a></li>
+                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line2 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="/#profile" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Profile</a></li>
+                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line3 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="/#contact" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Contact</a></li>
             </ul>
         </div>
     </nav>

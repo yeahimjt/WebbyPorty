@@ -35,6 +35,7 @@ const Profile = () => {
           </div>
           <div className='select-none'  >
             <h1 className="text-med font-heading tool" data-tooltip-id='tool' data-tooltip-place='top' data-data-tooltip-offset={10} data-tooltip-content="I go by JT too!">Jonathan Andrew Trevino</h1>
+            <p className="text-sm">📍 Edinburg, Texas</p>
             <Typewriter
   options={{
     strings: ['Full Stack Developer', 'Freelance Consultant', 'Front End Developer'],
