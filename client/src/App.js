@@ -51,7 +51,7 @@ function App() {
         </div>
         <ScrollToTop>
         <Routes>
-          <Route path="/" element={<Mainpage />}/>
+          <Route path="/" element={<Mainpage setAlert={setAlert}/>}/>
           <Route path="/central-tech" element={<CentralTech />}/>
           <Route path="/my-llave" element={<MyLlave />}/>
           <Route path="/film-review" element={<FilmReview />}/>
