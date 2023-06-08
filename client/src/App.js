@@ -9,6 +9,7 @@ import CentralTech from './containers/CentralTech';
 import ScrollToTop from './components/ScrollToTop';
 import MyLlave from './containers/MyLlave';
 import FilmReview from './containers/FilmReview';
+import Resume from './containers/Resume';
 AOS.init();
 export const ThemeContext = createContext(null)
 export const ProjectAnimationContext = createContext(null)
@@ -55,6 +56,7 @@ function App() {
           <Route path="/central-tech" element={<CentralTech />}/>
           <Route path="/my-llave" element={<MyLlave />}/>
           <Route path="/film-review" element={<FilmReview />}/>
+          <Route path="/resume" element={<Resume />}/>
         </Routes>
         </ScrollToTop>
         {
