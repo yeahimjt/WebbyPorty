@@ -2,6 +2,8 @@ import React, {useContext, useEffect, useRef} from 'react'
 import gsap from 'gsap'
 import { ThemeContext } from '../App'
 import { AiOutlineClose } from 'react-icons/ai'
+import { BsLink45Deg } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 const NavMenu = ({state,setState,disabled, disableMenu}) => {
 
@@ -12,6 +14,8 @@ const NavMenu = ({state,setState,disabled, disableMenu}) => {
     let line1 = useRef(null)
     let line2 = useRef(null)
     let line3 = useRef(null)
+    let line4 = useRef(null)
+
     useEffect(()=> {
         if (state.clicked === false) {
             // close menu
@@ -45,7 +49,7 @@ const NavMenu = ({state,setState,disabled, disableMenu}) => {
                 height:'100%'
             })
             staggerReveal(revealMenuBackground,revealMenu)
-            staggerText(line1,line2,line3)
+            staggerText(line1,line2,line3, line4)
         }
       }, [state])
 
@@ -61,8 +65,8 @@ const NavMenu = ({state,setState,disabled, disableMenu}) => {
             }
         })
         }
-        const staggerText = (node1,node2,node3) => {
-            gsap.from([node1,node2,node3], {
+        const staggerText = (node1,node2,node3,node4) => {
+            gsap.from([node1,node2,node3,node4], {
                 duration: 0.8,
                 y:100,
                 delay:.1,
@@ -94,9 +98,10 @@ const NavMenu = ({state,setState,disabled, disableMenu}) => {
         <div className={theme==="light"?"overflow-hidden bg-white block  relative opacity-0 z-50 text-[color:var(--black)]":"overflow-hidden bg-[color:var(--about-tease-dark)] block relative opacity-0 z-50"} ref={el => (revealMenu = el)}>
             <button disabled={disabled} onClick={()=> setState({clicked: false, menuName: "Menu"})}><AiOutlineClose  className={theme==="light"?"absolute right-14 top-8 animate-wiggle animate-infinite text-yellow hover:text-[color:var(--main-blue)] hover:cursor-pointer": "absolute right-14 top-8 animate-wiggle animate-infinite text-white hover:text-white hover:cursor-pointer"} size={30} /></button>
             <ul className="text-big mt-32">
-                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line1 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="/#projects" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Projects</a></li>
-                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line2 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="/#profile" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Profile</a></li>
-                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><a ref={el=> (line3 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} href="/#contact" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Contact</a></li>
+                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><Link ref={el=> (line1 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?"absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} to="/" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Home</Link></li>
+                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><Link ref={el=> (line2 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} to="/#projects" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Projects</Link></li>
+                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><Link ref={el=> (line3 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} to="/#profile" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Profile</Link></li>
+                <li className="h-[135px] overflow-hidden relative flex justify-center items-center list-none w-full"><Link ref={el=> (line4 = el)}  onMouseEnter={e => handleHover(e)} onMouseOut={e => handleHoverExit(e)} className={theme==="light"?" absolute hover:text-[color:var(--about-tease-dark)]": "absolute hover:text-[color:var(--about-tease)]"} to="/#contact" onClick={()=> setState({clicked: false, menuName: "Menu"})}>Contact</Link></li>
             </ul>
         </div>
     </nav>

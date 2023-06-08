@@ -24,7 +24,7 @@ const Homepage = () => {
       <div className="flex justify-center    ">
         <SkillTease />
     </div>
-    <div className={theme === "light" ? " tablet:h-[95vh] bg-white flex justify-center flex-col items-center gap-6 w-full border-b-4 border-black/20 overflow-visible pb-64 z-20" : " tablet:h-[95vh] bg-[color:var(--black)] flex justify-center flex-col items-center gap-6 w-full border-b-4 border-black/20 overflow-visible pb-64 z-20"}>
+    <div className={theme === "light" ? " tablet:h-[95vh] bg-white flex justify-center flex-col items-center gap-6 w-full border-b-4 border-black/20 overflow-visible pb-64 z-20" : " tablet:h-[95vh] bg-[color:var(--black)] flex justify-center flex-col items-center gap-6 w-full border-b-4 border-black/20 overflow-visible pb-64 z-20"} id="">
         <div className={theme==="light" ? "leading-tight bg-white/90 p-4 rounded-2xl z-40 relative text-[color:var(--black-darkest)] select-none mx-8 homepage-text:mx-0 animate-slideup   overflow-visible mt-96 smallest:mt-64" : "leading-tight bg-black/20 rounded-2xl  relative text-[color:var(--white-lightest)] select-none z-40 mx-8 homepage-text:mx-0 animate-slideup overflow-visible mt-96 smallest:mt-64 p-4"}>
             <h4 className="text-xs smallest:text-sm left-12 font-paragraph -top-0 relative smallest:left-0 -rotate-2 animate-slightrotate  overflow-y-hidden z-40">Hi! I'm,</h4>
             <div className="">
