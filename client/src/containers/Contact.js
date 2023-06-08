@@ -13,43 +13,43 @@ const Contact = ({alert, setAlert}) => {
   const [body, setBody] = useState(null)
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // if (!name || !email || !body) {
-    //   setAlert([<BiMessageError  className="alert-icon text-4xl"  />, "Your email was not sent!", "You are missing a necessary field."])
-    //   return
-    // }
-    // setAlert([
-    //   <TbMailFast className="alert-icon text-4xl"/>,
-    //   "Your email is sending!",
-    //   "Update Pending..."
-    //   ])
-    //  await fetch("https://web-portfolio-l9jd.onrender.com/send", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-type": "application/json",
-    //   },
-    //   body: JSON.stringify({ 
-    //     name,
-    //     email,
-    //     body
-    //    }),
-    // })
-    //   .then((res) => res.json())
-    //   .then(async (res) => {
-    //       const resData = await res;
-    //       console.log(resData);
-    //       if (resData.status === "success") {
-    //         console.log('here')
-    //         setAlert([<IoMdCheckmarkCircleOutline  className="alert-icon text-4xl" />, "Your email was sent!", "A response is headed back your way!"])
-    //       } else if (resData.status === "fail") {
-    //         console.log('out')
-    //         setAlert([<BiMessageError className="alert-icon text-4xl"  />, "Your email was not sent!", "There is an error with the mailing service. Sorry for the inconvinience."])
-    //       }
-    //     })
-    //   .then(() => {
-    //     setName(null)
-    //     setEmail(null)
-    //     setBody(null)
-    //   });
+    if (!name || !email || !body) {
+      setAlert([<BiMessageError  className="alert-icon text-4xl"  />, "Your email was not sent!", "You are missing a necessary field."])
+      return
+    }
+    setAlert([
+      <TbMailFast className="alert-icon text-4xl"/>,
+      "Your email is sending!",
+      "Update Pending..."
+      ])
+     await fetch("https://web-portfolio-l9jd.onrender.com/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ 
+        name,
+        email,
+        body
+       }),
+    })
+      .then((res) => res.json())
+      .then(async (res) => {
+          const resData = await res;
+          console.log(resData);
+          if (resData.status === "success") {
+            console.log('here')
+            setAlert([<IoMdCheckmarkCircleOutline  className="alert-icon text-4xl" />, "Your email was sent!", "A response is headed back your way!"])
+          } else if (resData.status === "fail") {
+            console.log('out')
+            setAlert([<BiMessageError className="alert-icon text-4xl"  />, "Your email was not sent!", "There is an error with the mailing service. Sorry for the inconvinience."])
+          }
+        })
+      .then(() => {
+        setName(null)
+        setEmail(null)
+        setBody(null)
+      });
   }
   const { ref: myRef4, inView: myElementIsVisible4 } = useInView({
     triggerOnce: true
