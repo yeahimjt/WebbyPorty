@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from 'react'
 import { ProjectAnimationContext, ThemeContext } from '../App'
 import CentralPreview from '../assets/centralpreview.png'
 import MyLlave from '../assets/myllavepreview.png'
-import Macbook from '../assets/MacBook.png'
+import Macbook from '../assets/Macbook.png'
 import { gsap } from 'gsap'
 import AOS from 'aos';
 
