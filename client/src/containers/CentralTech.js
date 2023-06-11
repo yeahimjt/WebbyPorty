@@ -81,7 +81,9 @@ const CentralTech = () => {
               <div className="overflow-hidden h-fit ">
                   <h1 ref={el => (line1 = el)} className="font-heading text-center text-med clip-began opacity-0 translate-y-8">Central Tech</h1>
                   <p ref={el => (line2 = el)} className="font-paragraph text-xs pb-4 leading-loose clip-began opacity-0 translate-y-8 text-center">Immerse yourself in a seamless online shopping journey with my self-developed full 
-                  stack e-commerce web application. It provides a comprehensive array of functionalities, allowing you to effortlessly browse, search, save, purchase, and filter products. I have meticulously implemented all the necessary pages to provide a complete and satisfying e-commerce experience.</p>
+                  stack e-commerce web application. It provides a comprehensive array of functionalities, allowing you to effortlessly browse, search, save, purchase, and filter products. I have meticulously implemented all the necessary pages to provide a complete and satisfying e-commerce experience.
+                  <br/><i className="text-red-500 italic text-xs text-center">Please allow website to load for 1-3 minutes, it is hosted on netlify and render and takes time to load. Once loaded, the application can be navigated seamlessly.</i>
+                  </p>
                 </div>
                 <div className="flex justify-center gap-2 gap-y-2 text-white flex-wrap  ">
                   <div ref={el => (card1 = el)} className={theme==="light"? "flex gap-2 scale-0 justify-center items-center w-[150px] bg-[color:var(--black)] py-2" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 "}>
