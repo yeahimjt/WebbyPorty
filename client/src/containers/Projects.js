@@ -89,7 +89,7 @@ function cleanCircle(e) {
     <div className={theme==="light"?"bg-white border-t-4 border-black/20 px-12":"bg-[color:var(--black)]  border-t-4 border-black/20 px-12"} id="projects">
         <h1 ref={el=> (projectStart = el)} className={theme==="light"? "mx-auto  smallest:w-max pt-16 font-heading text-med smallest:text-big leading-snug px-4 text-black " : "mx-auto smallest:w-max pt-16 font-heading text-med smallest:text-big leading-snug px-4 text-white"}>Projects <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-6 smallest:-top-12">that have cemented expertise and skills</i><section className="inline-block relative -top-3 smallest:-top-7 left-2">.</section></h1>
         <div className="flex gap-4 justify-center tablet:flex-row flex-col items-center">
-          <div className="flex flex-col gap-y-5 mt-32 overflow-hidden">
+          <div className="flex flex-col gap-y-5 mt-16 overflow-hidden">
             <div ref={el => (project1 = el)} className="rounded-2xl w-fit group cursor-pointer max-w-[680px] opacity-0  translate-y-[300px] overflow-hidden" onMouseMove={e=>moveCircle(e)} onMouseLeave={e=>cleanCircle(e)} onClick={()=> {
                 setProjectState({
                   initial:null,
