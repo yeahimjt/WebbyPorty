@@ -27,8 +27,8 @@ const Profile = () => {
   return (
     <>
     <div  ref={myRef4} className={theme==="light"?"bg-white p-8 tablet:m-0" : "bg-[color:var(--black)] p-8 tablet:m-0"} id="profile">
-      <h1   className={theme==="light"? "mx-auto w-max pt-16 font-heading text-med homepage-header:text-big leading-snug px-4 text-black " : "mx-auto w-max pt-16 font-heading text-med homepage-header:text-big leading-snug px-4 text-white"}>Profile <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-4 homepage-header:-top-12">a little more about me</i><section className="inline-block relative -top-2 title:-top-1 homepage-header:-top-7 left-2">.</section></h1>
-      <div  className={`${theme==="light"?"max-w-[1200px]  flex flex-col gap-4 p-4 bg-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px]":" max-w-[1200px]  flex flex-col gap-4 p-4 bg-[color:var(--about-tease-dark)] text-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-t-[1px] "} ${myElementIsVisible4 ? 'animate-flip-up animate-once animate-duration-1000 animate-ease-in-out animate-normal animation-delay-300' : ''}`}>
+      <h1   className={theme==="light"? "mx-auto w-max pt-16 font-heading text-med homepage-header:text-big leading-snug px-4 text-black text-center" : "mx-auto w-max pt-16 font-heading text-med homepage-header:text-big leading-snug px-4 text-white text-center"}>Profile <br/><i className="text-[color:var(--light-blue)] text-sm title:text-med relative -top-4 homepage-header:-top-12">a little more about me</i><section className="inline-block relative -top-2 title:-top-1 homepage-header:-top-7 left-2">.</section></h1>
+      <div  className={`${theme==="light"?"max-w-[1200px]  flex flex-col gap-4 p-4 bg-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 ":" max-w-[1200px]  flex flex-col gap-4 p-4 bg-[color:var(--black)] text-white   mx-auto rounded drop-shadow-xl border-x-2 border-b-2 border-gray-800/50"} ${myElementIsVisible4 ? 'animate-flip-up animate-once animate-duration-1000 animate-ease-in-out animate-normal animation-delay-300' : ''}`}>
         <div className="flex gap-4 h-full flex-col profile-icon:flex-row">
           <div className="flex justify-center items-center">
             <img className="w-[120px] h-[120px] relative  object-cover rounded-full" src={Gif} alt="memoji"/>
@@ -49,14 +49,6 @@ const Profile = () => {
           </div>
         </div>
         <p className="font-heading text-sm">Skills</p>
-        <Accordion allowMultipleExpanded={true}>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton style={{backgroundColor: theme==="light"? '#DDDDDD' : '#999999', color: theme==="light"? 'black' : 'white'}}>
-                        Front End Skills
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
                  <div className="flex justify-center gap-2 gap-y-2 text-white flex-wrap">
                   <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2"} `}>
                     <SiReact className="text-[color:var(--cyan)]" size={30}/>
@@ -87,15 +79,6 @@ const Profile = () => {
                     <p className="text-sm">Bootstrap</p>
                   </div>
                   </div>
-                </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton style={{backgroundColor: theme==="light"? '#DDDDDD' : '#999999', color: theme==="light"? 'black' : 'white'}}>
-                        Back End Skills
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
                 <div className="flex justify-center gap-2 gap-y-2 text-white flex-wrap">
                   <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2 " : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2 "} `}>
                     <SiExpress className="text-[color:#9BCD27]" size={30}/>
@@ -134,15 +117,6 @@ const Profile = () => {
                     <p className="text-sm">JavaScript</p>
                   </div>
                 </div>
-                </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton style={{backgroundColor: theme==="light"? '#DDDDDD' : '#999999', color: theme==="light"? 'black' : 'white'}}>
-                        Other Skills
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
                 <div className="flex justify-center gap-2 gap-y-2 text-white flex-wrap">
                   <div className={`${theme==="light"? "flex gap-2 justify-center items-center w-[150px] bg-[color:var(--black)] py-2" : "flex gap-2 justify-center items-center w-[150px] bg-white text-black py-2"} `}>
                     <SiGit className="text-[color:#EA4E31]" size={30}/>
@@ -153,9 +127,6 @@ const Profile = () => {
                     <p className="text-sm">Figma</p>
                   </div>
                 </div>    
-                </AccordionItemPanel>
-            </AccordionItem>
-        </Accordion>
         <p className="font-heading text-sm mt-12">About Me</p>
         <p>Having an extensive background in computer science, I possess a broad foundation of various programming languages, enabling me to rapidly adapt to new technologies by leveraging my grasp of fundamental programming principles. I enjoy pushing my knowledge beyond just making things work, I go a step further to understand why it works to strengthen my knowledge. I take great pride in the work I do.</p>
         <p className="font-heading text-sm mt-12">Experience</p>
