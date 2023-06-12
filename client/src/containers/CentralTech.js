@@ -211,7 +211,13 @@ const CentralTech = () => {
                     <CgArrowRightR className="group-hover:rotate-45 transition-all" size={30}/>
                   </div>
                 </div>
-                <div className="flex justify-between items-center w-[80%] max-w-[800px] hover:cursor-pointer group py-8  px-8 border-2 rounded-3xl mb-32 drop-shadow-md">
+                <div className="flex justify-between items-center w-[80%] max-w-[800px] hover:cursor-pointer group py-8  px-8 border-2 rounded-3xl mb-32 drop-shadow-md" onClick={()=> {
+                    setProjectState({
+                      initial:null,
+                      clicked:true,
+                      redirect: '/film-review'
+                    })
+                  }}>
                   <div className="">
                     <h1 className="font-heading text-med">Film Review</h1>
                     <p className="text-sm">Full Stack Movie Browsing Website</p>
