@@ -49,7 +49,7 @@ const Homepage = () => {
             <h1 className='text-xs smallest:text-sm mt-2 overflow-visible'>Bachelor of <b className="text-blue-500">Computer Science</b></h1>
             <p className='text-xs'>University of Texas at San Antonio</p>
           </div>
-          <div className={theme==="light"?"text-center  shadow-lg w-[70%] bg-white/10 backdrop-blur-xl mx-auto tablet:m-0   tablet:w-[350px] p-8 rounded-3xl overflow-visible tablet:h-[250px] flex justify-center flex-col items-center": "text-center  shadow-lg w-[70%] bg-black/10 backdrop-blur-xl mx-auto tablet:m-0   tablet:w-[350px] p-8 rounded-3xl overflow-visible tablet:h-[250px] flex justify-center flex-col items-center"}>
+        <div className={theme==="light"?"text-center  shadow-lg w-[70%] bg-white/10 backdrop-blur-xl mx-auto tablet:m-0   tablet:w-[350px] p-8 rounded-3xl overflow-visible tablet:h-[250px] flex justify-center flex-col items-center": "text-center  shadow-lg w-[70%] bg-black/10 backdrop-blur-xl mx-auto tablet:m-0   tablet:w-[350px] p-8 rounded-3xl overflow-visible tablet:h-[250px] flex justify-center flex-col items-center"}>
             <div className="flex justify-center">
               <TbFileCertificate className="icon" size={70}/>
             </div>
