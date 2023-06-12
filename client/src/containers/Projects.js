@@ -98,7 +98,7 @@ function cleanCircle(e) {
                 })
               }}>
                 <img src={CentralPreview} alt="Central Tech"/>
-                <div className={theme==="light"?"p-4 flex justify-between items-center bg-white/40":"p-4 flex justify-between items-center bg-black/20 text-white"}>
+                <div className={theme==="light"?"p-4 flex justify-between items-center bg-gray-200/40":"p-4 flex justify-between items-center bg-black/20 text-white"}>
                   <section>
                     <h1 className="font-heading text-med">Central Tech</h1>
                     <p className={theme==="light"?"font-paragraph italic text-black/50 px-1":"font-paragraph italic text-white/60 px-1"}>Full Stack Ecommerce Website</p>
@@ -114,7 +114,7 @@ function cleanCircle(e) {
               })
             }}>
               <img src={Macbook} alt="Film Review"/>
-              <div className={theme==="light"?"p-4 flex justify-between items-center bg-white/40":"p-4 flex justify-between items-center bg-black/20 text-white"}>
+              <div className={theme==="light"?"p-4 flex justify-between items-center bg-gray-200/40":"p-4 flex justify-between items-center bg-black/20 text-white"}>
                 <section>
                   <h1 className="font-heading text-med">Film Review</h1>
                   <p className={theme==="light"?"font-paragraph italic text-black/50 px-1":"font-paragraph italic text-white/60 px-1"}>Full Stack Movie Browsing Website</p>
@@ -133,7 +133,7 @@ function cleanCircle(e) {
               })
             }}>
               <img src={MyLlave} alt="My Llave"/>
-              <div className={theme==="light"?"p-4 flex justify-between items-center bg-white/40":"p-4 flex justify-between items-center bg-black/20 text-white"}>
+              <div className={theme==="light"?"p-4 flex justify-between items-center bg-gray-200/40":"p-4 flex justify-between items-center bg-black/20 text-white"}>
                 <section>
                   <h1 className="font-heading text-med">My LLave</h1>
                   <p className={theme==="light"?"font-paragraph italic text-black/50 px-1":"font-paragraph italic text-white/60  px-1"}>Full Stack Realtor Website</p>
