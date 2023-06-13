@@ -56,7 +56,7 @@ const Homepage = () => {
             <h1 className='text-xs smallest:text-sm mt-2 overflow-visible'>Front End Developer Certified</h1>
             <p className='text-xs'>from <b className="text-blue-500">Meta</b> provided by Coursera</p>
           </div>
-          <div className={theme==="light"?"text-center  shadow-lg bg-gray-200/40 backdrop-blur-xl mx-auto tablet:m-0 tablet:absolute left-[250px] animate-cloudMove top-[250px]   w-[250px] p-8 rounded-full overflow-visible h-[250px] flex justify-center flex-col items-center": "text-center  shadow-lg animate-cloudMove  bg-black/10 backdrop-blur-xl mx-auto tablet:m-0 tablet:absolute top-[250px] left-[250px] w-[250px] p-8 rounded-full overflow-visible h-[250px] flex justify-center flex-col items-center"}>
+          <div className={theme==="light"?"text-center  shadow-lg bg-gray-200/40 backdrop-blur-xl mx-auto tablet:m-0 tablet:absolute left-[350px] animate-cloudMove top-[250px]   w-[250px] p-8 rounded-full overflow-visible h-[250px] flex justify-center flex-col items-center": "text-center  shadow-lg animate-cloudMove  bg-black/10 backdrop-blur-xl mx-auto tablet:m-0 tablet:absolute top-[250px] left-[250px] w-[250px] p-8 rounded-full overflow-visible h-[250px] flex justify-center flex-col items-center"}>
             <div className="flex justify-center">
               <AiOutlineCompass className="icon" size={70}/>
             </div>
