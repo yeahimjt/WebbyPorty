@@ -59,6 +59,7 @@ module.exports = {
         move: 'move 15s ease-in-out infinite',
         cloudMove: 'cloudMove 20s ease-in-out infinite',
         cloudMove2: 'cloudMove2 22s ease-in-out infinite',
+        cloudMove3: 'cloudMove3 18s ease-in-out infinite',
       },
       fontSize: {
         big: '52px',
@@ -202,6 +203,20 @@ module.exports = {
           },
           '75%': {
             transform: 'translateX(5px) translateY(-20px)'
+          },
+          '100%': {
+            transform: 'translateX(0px) translateY(0px)'
+          }
+        },
+        cloudMove3: {
+          '0%': {
+            transform: 'translateX(0px) translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateX(-10px) translateY(-12px) rotate(6deg)'
+          },
+          '75%': {
+            transform: 'translateX(-20px) translateY(-5px)'
           },
           '100%': {
             transform: 'translateX(0px) translateY(0px)'
