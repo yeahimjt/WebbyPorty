@@ -24,7 +24,8 @@ module.exports = {
        },
       borderRadius: {
       'right':'10px 0px 0px 10px',
-        'left':'0px 10px 10px 0px',
+      'left':'0px 10px 10px 0px',
+      'bottomright': '24px 24px 0px 24px'
       },
       backgroundImage: {
         'test': "linear-gradient(269.79deg, #16D9E3 2.48%, #30C7EC 54.74%, #46AEF7 99.9%)",
@@ -60,6 +61,7 @@ module.exports = {
         cloudMove: 'cloudMove 20s ease-in-out infinite',
         cloudMove2: 'cloudMove2 22s ease-in-out infinite',
         cloudMove3: 'cloudMove3 18s ease-in-out infinite',
+        rotate: 'rotate 5s linear infinite'
       },
       fontSize: {
         big: '52px',
@@ -220,6 +222,14 @@ module.exports = {
           },
           '100%': {
             transform: 'translateX(0px) translateY(0px)'
+          }
+        },
+        rotate: {
+          '0%': {
+            transform: 'rotate(0deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg)'
           }
         }
       }

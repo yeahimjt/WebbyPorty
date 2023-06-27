@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 import { CgArrowLeft, CgArrowRight, CgArrowRightR } from 'react-icons/cg'
 import Footer from '../components/Footer'
 import ProjectSwipe from '../components/ProjectSwipe'
+import ProjectUnswipe from '../components/ProjectUnswipe'
 
 gsap.registerPlugin(ScrollTrigger)
 const FilmReview = () => {
@@ -23,12 +24,13 @@ const FilmReview = () => {
   const imgSlides = [
     "","fr-1.png","fr-2.png","fr-3.png","fr-4.png","fr-5.png"
   ]
-  const {setProjectState} = useContext(ProjectAnimationContext)
+  const {projectState,setProjectState} = useContext(ProjectAnimationContext)
   useEffect(()=> {
     window.scrollTo(0, 0)
     staggerText(line1,line2)
     staggerImage(projectImage)
     animateOut(card1,card2,card3,card4,card5,card6)
+    
   },[])
   const staggerText = (node1,node2) => {
     gsap.to([node1,node2], {
@@ -70,7 +72,7 @@ const FilmReview = () => {
   }
   return (
     <>
-        <ProjectSwipe />
+        <ProjectUnswipe projectState={projectState} setProjectState={setProjectState}/>
         <div className={theme==="light"?"pt-32 px-12 flex tablet:flex-row flex-col items-center gap-y-6 pb-8":"pt-32 px-12 flex tablet:flex-row flex-col items-center gap-y-6 pb-8 bg-[color:var(--black)] text-white"}>
             <div className="tablet:flex-[0.5] justify-center ">
               <div className="overflow-hidden h-fit ">

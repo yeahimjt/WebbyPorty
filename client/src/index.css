@@ -46,6 +46,13 @@ body {
   --skill-tease-dark: #777777;
   --about-tease-dark: #555555;
   --about-card-dark: #999999;
+
+  --p-blue: #ADE4FF;
+  --p-high: #47C2FD;
+  --p-pink: #F8D1FF;
+  --p-yellow: #FFF3D5;
+  --p-green: #D7F9D0;
+  --p-orange: #F2C794;
 }
 
 @media only screen and (max-width: 600px) {

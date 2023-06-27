@@ -5,6 +5,9 @@ import Projects from './Projects'
 import Profile from './Profile'
 import Contact from './Contact'
 import { useLocation } from 'react-router-dom'
+import Skills from './Skills'
+import Experience from './Experience'
+import Footer from '../components/Footer'
 
 const Mainpage = ({alert, setAlert}) => {
   const location = useLocation()
@@ -22,7 +25,10 @@ const Mainpage = ({alert, setAlert}) => {
     <AboutTease />
     <Projects />
     <Profile />
-    <Contact alert={alert} setAlert={setAlert}/>
+    <Skills />
+    <Experience />
+    {/* <Contact alert={alert} setAlert={setAlert}/> */}
+    <Footer />
     </>
   )
 }

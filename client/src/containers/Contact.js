@@ -1,15 +1,18 @@
 import React, { useContext, useRef, useState } from 'react'
-import { ThemeContext } from '../App'
+import { ProjectAnimationContext, ThemeContext } from '../App'
 import { SiLinkedin } from 'react-icons/si'
-import { BsMailbox2 } from 'react-icons/bs'
+import { BsArrowRight, BsMailbox2 } from 'react-icons/bs'
 import {BiMessageError} from 'react-icons/bi'
 import {IoMdCheckmarkCircleOutline} from 'react-icons/io'
 import {TbMailFast} from 'react-icons/tb'
 import { useInView } from 'react-intersection-observer'
 import emailjs from '@emailjs/browser'
+import Alert from '../components/Alert'
+import ProjectUnswipe from '../components/ProjectUnswipe'
 const Contact = ({alert, setAlert}) => {
   const {theme} = useContext(ThemeContext)
   const form = useRef()
+  const {projectState, setProjectState} = useContext(ProjectAnimationContext)
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!form.current.name.value || !form.current.email_address.value || !form.current.message.value) {
@@ -28,20 +31,34 @@ const Contact = ({alert, setAlert}) => {
     triggerOnce: true
   });
   return (
-    <div className={theme==="light"?"pb-32":"pb-32 bg-[color:var(--black)]"} id="contact">
-      <h1 className={theme==="light"? "mx-auto w-max pt-16 font-heading text-med title:text-big leading-snug px-4 text-black  max-w-[714px text-left]" : "mx-auto w-max pt-16 font-heading text-med title:text-big leading-snug px-4 text-white max-w-[714px]"}>Contact</h1>
-      <p className={theme==="light"? " mx-auto pt-16 font-paragraph text-sm title:text-med leading-snug px-4 text-black  max-w-[714px] relative -top-12" : "mx-auto pt-16 font-paragraph text-sm title:text-med leading-snug px-4 text-white max-w-[714px] relative -top-12"}><i className="text-[color:var(--light-blue)] text-sm title:text-med">Lets Connect</i> - Reach out to discuss potential projects, collaborations, or simply to say hello!</p>
-      <div ref={myRef4} className="flex gap-6 mobile:flex-row flex-col justify-center py-16 flex-wrap">
-        <a href="https://linkedin.com/in/jonathanandrewtrevino" target="_blank" rel="noreferrer" className="flex gap-2 w-[80%] mobile:w-max mx-auto mobile:m-0 items-center justify-center bg-[color:#0077B5] rounded-lg px-8 py-2 text-white hover:scale-105 hover:shadow-lg hover:cursor-pointer font-paragraph transition-all"><SiLinkedin size={32}/><p className="text-base">LinkedIn</p></a>
-        <a href="mailto:yeahimjt@gmail.com" className={theme==="light"?"flex gap-2 items-center justify-center border-2 w-[80%]  mobile:w-max mx-auto mobile:m-0 border-[color:var(--light-blue)] px-8 py-2 rounded-lg hover:scale-105 hover:shadow-lg hover:cursor-pointer font-paragraph transition-all":"flex w-[80%]  mobile:w-max mx-auto mobile:m-0 gap-2 items-center justify-center border-2 border-[color:var(--light-blue)] px-8 py-2 text-white font-paragraph rounded-lg hover:scale-105 hover:shadow-lg hover:cursor-pointer transition-all"}><BsMailbox2 size={32} /><p className="text-base">yeahimjt@gmail.com</p></a>
+    <>
+      <ProjectUnswipe projectState={projectState} setProjectState={setProjectState}/>
+    <div className={theme==="light"?"relative py-64 px-12 h-screen":"bg-[color:var(--black)] relative py-64 px-12 text-white h-screen"} id="profile">
+      <div className="px-8 py-2 bg-red-50 w-fit -rotate-12 relative">
+        <h1 className="font-heading text-med text-black">Let's Chat</h1>
       </div>
-      <form ref={form} className="flex flex-col justify-center items-center max-w-[914px] gap-6  mx-auto p-8">
-        <input name="name" className={`${theme==="light"? "w-full resize-y px-4 py-4 rounded-lg bg-[color:#E8E8E8] focus:scale-105 transition-all" : "w-full resize-y px-4 py-4 rounded-lg bg-[color:#777777] text-white focus:scale-105 transition-all placeholder-white"} ${myElementIsVisible4 ? 'animate-fade-right animate-once animation-delay-100 animate-duration-1000  animate-ease-in-out animate-normal animate-fill-backwards' : ''}`} type="text" placeholder="Full Name"/>
-        <input name="email_address" className={`${theme==="light"? " w-full resize-y px-4 py-4 rounded-lg bg-[color:#E8E8E8] focus:scale-105 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 transition-all" : "w-full resize-y px-4 py-4 rounded-lg bg-[color:#777777] text-white focus:scale-105 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none invalid:border-pink-500 invalid:text-red-300 focus:invalid:border-pink-500 focus:invalid:ring-pink-500 transition-all placeholder-white"} ${myElementIsVisible4 ? 'animate-fade-left animation-delay-200 animate-fill-backwards animate-once animate-duration-1000 animate-ease-in-out animate-normal' : ''}`} type="email" placeholder="Email Address"/>
-        <textarea name="message" className={`${theme==="light"? " w-full resize-y px-4 py-4 rounded-lg bg-[color:#E8E8E8] focus:scale-105 transition-all" : "w-full resize-y px-4 py-4 rounded-lg bg-[color:#777777] text-white focus:scale-105 transition-all placeholder-white"} ${myElementIsVisible4 ? 'animate-fade-right animate-once animate-duration-1000 animate-fill-backwards animation-delay-300 animate-ease-in-out animate-normal' : ''}`} type="text" placeholder="Your Message"/>
-        <button className={`${"bg-test w-full py-4 rounded-lg mt-4 text-white hover:scale-105  transition-all" } ${myElementIsVisible4 ? 'animate-fade-left animate-once animate-duration-1000 animation-delay-400 animate-fill-backwards animate-ease-in-out animate-normal ' : ''}`} onClick={(e)=> {handleSubmit(e)}}>Start a Conversation</button>
-      </form>
+      <div className="flex tablet:flex-row flex-col gap-12">
+        <div className="flex flex-col pt-16 flex-[0.5] gap-4">
+          <h1 className="font-paragraph text-med">Open to recruitment and project collaborations.</h1>
+          <p className="font-paragraph text-sm">Your ideas matter, and I'm here to transform them into reality. Fill out the contact form below, and I promise to reply swiftly.</p>
+        </div>
+        <div className="flex flex-col pt-16 flex-[0.5] gap-4">
+          <form ref={form} className="flex flex-col gap-4 p-4">
+            <input name="name" className={theme==="light"?"rounded-3xl px-8 py-4 bg-[color:var(--p-pink)] placeholder-black/70 focus:scale-[1.01] focus:shadow-md":"bg-[color:var(--p-pink)] rounded-3xl placeholder-black/70 px-8 py-4 focus:scale-[1.01] focus:shadow-md"} placeholder="Full Name"></input>
+            <input name="email_address" className={theme==="light"?"rounded-3xl px-8 py-4 bg-[color:var(--p-yellow)] placeholder-black/70 focus:scale-[1.01] focus:shadow-md":"bg-[color:var(--p-yellow)] rounded-3xl placeholder-black/70 px-8 py-4 focus:scale-[1.01] focus:shadow-md"} placeholder="Your Email Address"></input>
+            <textarea name="message" className={theme==="light"?"rounded-bottomright px-8 py-4 bg-[color:var(--p-green)] placeholder-black/70 focus:scale-[1.01] focus:shadow-md":"bg-[color:var(--p-green)] rounded-bottomright placeholder-black/70 px-8 py-4 focus:scale-[1.01] focus:shadow-md text-black"} placeholder="Your Idea"></textarea>
+            <button className="font-paragraph text-sm bg-[color:var(--p-high)] px-6 py-1 mt-2 flex items-center gap-2 hover:gap-4 hover:cursor-pointer transition-all justify-center rounded-2xl group" onClick={(e)=> {handleSubmit(e)}}>About Me <BsArrowRight size={30} className="group-hover:border-2 rounded-full p-1 transition-all"></BsArrowRight></button>
+          </form>
+        </div>
+      </div>
     </div>
+    {
+      alert ?
+      <Alert alert={alert} setAlert={setAlert}/>
+      :
+      ''
+    }
+    </>
   )
 }
 

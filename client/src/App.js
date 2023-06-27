@@ -10,6 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import MyLlave from './containers/MyLlave';
 import FilmReview from './containers/FilmReview';
 import Resume from './containers/Resume';
+import Contact from './containers/Contact';
 AOS.init();
 export const ThemeContext = createContext(null)
 export const ProjectAnimationContext = createContext(null)
@@ -57,14 +58,9 @@ function App() {
           <Route path="/my-llave" element={<MyLlave />}/>
           <Route path="/film-review" element={<FilmReview />}/>
           <Route path="/resume" element={<Resume />}/>
+          <Route path="/contact" element={<Contact alert={alert} setAlert={setAlert}/>}/>
         </Routes>
         </ScrollToTop>
-        {
-        alert ?
-        <Alert alert={alert} setAlert={setAlert}/>
-        :
-        ''
-      }
       </div>
       </ProjectAnimationContext.Provider>
     </ThemeContext.Provider>

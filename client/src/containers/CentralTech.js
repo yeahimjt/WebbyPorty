@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 import { CgArrowLeft, CgArrowRight, CgArrowRightR } from 'react-icons/cg'
 import Footer from '../components/Footer'
 import ProjectSwipe from '../components/ProjectSwipe'
+import ProjectUnswipe from '../components/ProjectUnswipe'
 
 gsap.registerPlugin(ScrollTrigger)
 const CentralTech = () => {
@@ -27,7 +28,7 @@ const CentralTech = () => {
     "","ct-1.png","ct-2.png","ct-3.png","ct-4.png","ct-5.png","ct-6.png","ct-7.png","ct-8.png","ct-9.png","ct-10.png", "ct-11.png"
   ] 
   console.log('../assets/'+imgSlides[selectedImage])
-  const {setProjectState} = useContext(ProjectAnimationContext)
+  const {projectState,setProjectState} = useContext(ProjectAnimationContext)
   useEffect(()=> {
     // window.scrollTo(0, 0)
     staggerText(line1,line2)
@@ -75,7 +76,7 @@ const CentralTech = () => {
   }
   return (
     <>
-        <ProjectSwipe />
+        <ProjectUnswipe projectState={projectState} setProjectState={setProjectState} />
         <div className={theme==="light"?"pt-32 px-12 flex tablet:flex-row flex-col items-center gap-y-6 pb-8":"pt-32 px-12 flex tablet:flex-row flex-col items-center gap-y-6 pb-8 bg-[color:var(--black)] text-white"}>
             <div className="tablet:flex-[0.5] justify-center ">
               <div className="overflow-hidden h-fit ">

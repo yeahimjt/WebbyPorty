@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 import { CgArrowLeft, CgArrowRight, CgArrowRightR } from 'react-icons/cg'
 import Footer from '../components/Footer'
 import ProjectSwipe from '../components/ProjectSwipe'
+import ProjectUnswipe from '../components/ProjectUnswipe'
 gsap.registerPlugin(ScrollTrigger)
 const MyLlave = () => {
   const {theme} = useContext(ThemeContext)
@@ -26,7 +27,7 @@ const MyLlave = () => {
     "","ml-1.png","ml-2.png","ml-3.png","ml-4.png","ml-5.png","ml-6.png","ml-7.png","ml-8.png"
   ] 
   console.log('../assets/'+imgSlides[selectedImage])
-  const {setProjectState} = useContext(ProjectAnimationContext)
+  const {projectState, setProjectState} = useContext(ProjectAnimationContext)
   useEffect(()=> {
     window.scrollTo(0, 0)
     staggerText(line1,line2)
@@ -74,7 +75,7 @@ const MyLlave = () => {
   }
   return (
     <>
-        <ProjectSwipe />
+        <ProjectUnswipe projectState={projectState} setProjectState={setProjectState}/>
         <div className={theme==="light"?"pt-32 px-12 flex tablet:flex-row flex-col items-center gap-y-6 pb-8": "pt-32 px-12 flex tablet:flex-row bg-[color:var(--black)] flex-col text-white items-center gap-y-6 pb-8"}>
             <div className="tablet:flex-[0.5] justify-center ">
               <div className="overflow-hidden h-fit ">
@@ -134,7 +135,7 @@ const MyLlave = () => {
             </div>
             <div className="flex pb-2 tablet:flex-row flex-col overflow-visible">
                 {/* <a className="font-paragraph flex justify-center flex-[0.5] underline text-blue-500 overflow-visible text-center" href="https://myllave.com" target="_blank" rel="noreferrer">https://myllave.com</a> */}
-                <p className="font-paragraph flex justify-center flex-[0.5] underline text-blue-500 overflow-visible text-center" href="https://myllave.com" target="_blank" rel="noreferrer">Under Maintenance</p>
+                <a className="font-paragraph flex justify-center flex-[0.5] underline text-blue-500 overflow-visible text-center" href="https://myllave.com" target="_blank" rel="noreferrer">https://myllave.com</a>
                 <a className="font-paragraph flex justify-center flex-[0.5] underline text-blue-500 overflow-visible text-center" href="https://github.com/yeahimjt/llave" target="_blank" rel="noreferrer">https://github.com/yeahimjt/llave</a>
                 <h2 className="font-paragraph flex justify-center flex-[0.5] overflow-visible text-center">May 1st 2023</h2>
                 <h2 className="font-paragraph flex justify-center flex-[0.5] overflow-visible text-center">June 2nd 2023</h2>
